@@ -29,7 +29,7 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
-import com.aone.algorithm.importantNode;
+import com.aone.algorithm.ImportantNode;
 import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
 
@@ -37,7 +37,7 @@ import com.aone.entity.Nodes;
  *
  * @author zrh
  */
-public class WeightedDegree implements Statistics, LongTask ,importantNode{
+public class WeightedDegree implements Statistics, LongTask ,ImportantNode{
 	
     public static final String WDEGREE = "weighted degree";
     public static final String WINDEGREE = "weighted indegree";

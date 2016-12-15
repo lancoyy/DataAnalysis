@@ -9,7 +9,7 @@ import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
 import com.aone.service.NodeConvertNum;
 
-@Service(value="NodeConvertNum")
+@Service(value="nodeConvertNum")
 public class NodeConvertNumImpl implements NodeConvertNum{
 	public static String[] nodes;
 	public static String[] Subnodes;

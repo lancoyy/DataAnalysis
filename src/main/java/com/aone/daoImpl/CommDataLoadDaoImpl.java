@@ -14,7 +14,7 @@ import com.aone.entity.Nodes;
 
 
 
-@Repository(value="CommDataLoadDao")
+@Repository(value="commDataLoadDao")
 public class CommDataLoadDaoImpl extends SuperDaoImpl<Telerecord> implements CommDataLoadDao {
 
 	/**

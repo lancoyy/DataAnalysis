@@ -12,12 +12,12 @@ import com.aone.dao.CommDataLoadDao;
 import com.aone.entity.Edges;
 import com.aone.service.CommDataLoad;
 
-@Service(value="CommDataLoad")
+@Service(value="commDataLoad")
 @Transactional
 public class CommDataLoadImpl implements CommDataLoad{
 	
 	@Resource
-	@Qualifier(value="CommDataLoadDao")
+	@Qualifier(value="commDataLoadDao")
 	private CommDataLoadDao commDataLoadDao;
 	
 	/**

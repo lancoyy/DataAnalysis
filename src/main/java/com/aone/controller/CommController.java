@@ -31,19 +31,19 @@ import com.aone.entity.Group;
 public class CommController {
 	
 	@Autowired
-	@Qualifier(value="CommDataLoad")
+	@Qualifier(value="commDataLoad")
 	CommDataLoad commDataLoad;
 	
 	@Autowired
-	@Qualifier(value="NodeConvertNum")
+	@Qualifier(value="nodeConvertNum")
 	NodeConvertNum nodeConvertNum;
 	
 	@Autowired
-	@Qualifier(value="DetecteCom")
+	@Qualifier(value="detecteCom")
 	DetecteCom detecteCom;
 	
 	@Autowired
-	@Qualifier(value="GraphOperator")
+	@Qualifier(value="graphOperator")
 	GraphOperator graphOperator;
 	
 	/**

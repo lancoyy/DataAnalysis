@@ -35,7 +35,7 @@ import com.aone.service.GraphOperator;
 /******************
  * 这个类现在的功能比较单一，只负责调用角色划分算法实现角色划分的功能，它直接返回graph对象
  *****************/
-@Service(value="GraphOperator")
+@Service(value="graphOperator")
 public class GraphOperatorImpl implements GraphOperator{
 
 	static Statistics statistics;

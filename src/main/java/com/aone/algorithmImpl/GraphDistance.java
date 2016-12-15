@@ -33,7 +33,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 import org.openide.util.Exceptions;
 import org.openide.util.Lookup;
 
-import com.aone.algorithm.importantNode;
+import com.aone.algorithm.ImportantNode;
 import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
 
@@ -42,7 +42,7 @@ import com.aone.entity.Nodes;
  *CLOSENESS算法
  * @author zrh
  */
-public class GraphDistance implements Statistics, LongTask ,importantNode{
+public class GraphDistance implements Statistics, LongTask ,ImportantNode{
 
     public static final String BETWEENNESS = "betweenesscentrality";
     public static final String CLOSENESS = "closnesscentrality";

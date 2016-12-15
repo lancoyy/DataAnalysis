@@ -35,14 +35,14 @@ import org.openide.util.Lookup;
 
 import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
-import com.aone.algorithm.importantNode;
+import com.aone.algorithm.ImportantNode;
 
 
 /**
  * 
  * @author zrh
  */
-public class PageRank implements Statistics, LongTask ,importantNode {
+public class PageRank implements Statistics, LongTask ,ImportantNode {
 
     public static final String PAGERANK = "pageranks";
     /** */

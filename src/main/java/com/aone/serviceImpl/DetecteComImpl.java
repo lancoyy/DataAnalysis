@@ -54,7 +54,7 @@ import com.aone.entity.Nodes;
 * 集成关系：无
 * 作者：高红。李佩伦
 */
-@Service(value="DetecteCom")
+@Service(value="detecteCom")
 public class DetecteComImpl extends PApplet implements DetecteCom{
 	
 	ProjectController pc;

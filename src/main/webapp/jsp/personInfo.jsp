@@ -10,7 +10,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>重要人物个人信息lalalallal</title>
+<title>重要人物个人信息</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -204,7 +204,7 @@
 												<strong>杨 小慧</strong>
 
 											</h3>
-											<small>学生</small> <span rel="shortcut icon" href="./res/img/icon/location.ico"><small>四川成都</small></span>
+											<small>学生</small> <span class="glyphicon glyphicon-search"></span><small>四川成都</small></span>
 
 										</div>
 										<!-- 备注：根据积分的颜色变化 -->

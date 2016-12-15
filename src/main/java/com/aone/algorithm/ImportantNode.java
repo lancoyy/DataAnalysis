@@ -8,7 +8,7 @@ import org.gephi.graph.api.GraphModel;
 import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
 
-public interface importantNode {
+public interface ImportantNode {
 	 public  ArrayList<Nodes> execute(ArrayList<Edges> edgesInfos,GraphModel graphModel, AttributeModel attributeModel);
 	 public ArrayList< Nodes> execute(int number,ArrayList<Edges> edgesInfos,GraphModel graphModel, AttributeModel attributeModel);
 	 public String getReport();

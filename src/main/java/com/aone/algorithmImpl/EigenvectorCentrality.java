@@ -30,7 +30,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.openide.util.Lookup;
 
-import com.aone.algorithm.importantNode;
+import com.aone.algorithm.ImportantNode;
 import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
 
@@ -39,7 +39,7 @@ import com.aone.entity.Nodes;
  * 
  * @author pjmcswee
  */
-public class EigenvectorCentrality implements Statistics, LongTask ,importantNode{
+public class EigenvectorCentrality implements Statistics, LongTask ,ImportantNode{
 
 	public static final String EIGENVECTOR = "eigencentrality";
 	private int numRuns = 100;
