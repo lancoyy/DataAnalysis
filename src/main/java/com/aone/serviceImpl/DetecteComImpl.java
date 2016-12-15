@@ -1,4 +1,4 @@
-package com.aone.algorithm;
+package com.aone.serviceImpl;
 
 import java.util.HashSet;
 import java.util.List;
@@ -12,6 +12,7 @@ import org.gephi.graph.api.HierarchicalGraph;
 import org.gephi.graph.api.Node;
 import org.gephi.statistics.spi.Statistics;
 import org.openide.util.Lookup;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
 
 import processing.core.*;
+import com.aone.service.DetecteCom;
 
 import org.gephi.data.attributes.api.AttributeController;
 import org.gephi.filters.api.FilterController;
@@ -38,6 +40,8 @@ import org.gephi.ranking.api.Ranking;
 import org.gephi.ranking.api.RankingController;
 import org.gephi.ranking.plugin.transformer.AbstractSizeTransformer;
 
+import com.aone.algorithmImpl.GirvanNewman;
+import com.aone.algorithmImpl.Modularity;
 import com.aone.entity.AllNodesandEdges;
 import com.aone.entity.Edges;
 import com.aone.entity.Group;
@@ -50,7 +54,8 @@ import com.aone.entity.Nodes;
 * 集成关系：无
 * 作者：高红。李佩伦
 */
-public class DetecteCom extends PApplet{
+@Service(value="DetecteCom")
+public class DetecteComImpl extends PApplet implements DetecteCom{
 	
 	ProjectController pc;
 	Workspace workspace;
@@ -92,7 +97,7 @@ public class DetecteCom extends PApplet{
 
 
 	public static void setAllWrite(boolean allWrite) {
-		DetecteCom.allWrite = allWrite;
+		DetecteComImpl.allWrite = allWrite;
 	}
 
 	private Layout layout;

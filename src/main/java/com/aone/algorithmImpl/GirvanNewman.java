@@ -1,7 +1,4 @@
-package com.aone.algorithm;
-
-
-
+package com.aone.algorithmImpl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,6 +33,7 @@ import org.gephi.utils.progress.Progress;
 import org.gephi.utils.progress.ProgressTicket;
 import org.openide.util.Lookup;
 
+import com.aone.algorithm.Community;
 import com.aone.entity.AllNodesandEdges;
 import com.aone.entity.Edges;
 import com.aone.entity.Nodes;
@@ -54,7 +52,7 @@ import com.aone.entity.Nodes;
  * @author zrh
  *
  */
-public class GirvanNewman implements Statistics, LongTask{
+public class GirvanNewman implements Statistics, LongTask, Community{
 	/**节点or边？属性栏中的索引或者叫描述*/
 	public static final String GN = "GirvanNewman";
     private double[] betweenness;//介度

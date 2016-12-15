@@ -1,4 +1,4 @@
-package com.aone.algorithm;
+package com.aone.algorithmImpl;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

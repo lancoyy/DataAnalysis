@@ -27,44 +27,7 @@ body {
   cursor:pointer;
   pointer-events:none;
  }
-#tooltip {   
-		position: absolute;           
-		text-align: center;
-		padding: 20px;             
-		margin: 10px;
-		font: 12px sans-serif;        
-		background: lightsteelblue;   
-		border: 1px;      
-		border-radius: 2px;           
-		pointer-events: none;         
-	}
-	#tooltip h4{
-		margin:0;
-		font-size:14px;
-	}
-	#tooltip{
-		background:rgba(0,0,0,0.9);
-		border:1px solid grey;
-		border-radius:5px;
-		font-size:12px;
-		width:auto;
-		padding:4px;
-		color:white;
-		opacity:0;
-	}
-	#tooltip table{
-		table-layout:fixed;
-	}
-	#tooltip tr td{
-		padding:0;
-		margin:0;
-	}
-	#tooltip tr td:nth-child(1){
-		width:50px;
-	}
-	#tooltip tr td:nth-child(2){
-		text-align:center;
-	}
+
 
 </style>
 <body>
@@ -80,9 +43,8 @@ document.oncontextmenu = function ()
 </script>
 <script>
 var margin = {top: -5, right: -5, bottom: -5, left: -5},
-width = 1300 - margin.left - margin.right,
-
-height = 670 - margin.top - margin.bottom;
+width = 1600 - margin.left - margin.right,
+height = 750 - margin.top - margin.bottom;
 
 var zoom = d3.behavior.zoom()
 .scaleExtent([0.3, 10])
@@ -123,7 +85,7 @@ var rect = svg.append("rect")
 var container = svg.append("g");
     
     
-d3.json("getDatas", function(error, graph) {
+d3.json("getSubDatas", function(error, graph) {
   force
       .nodes(graph.nodes)//获得或设置布局中的节点（node）阵列组
       .links(graph.links)//获得或设置布局中节点间的连接（Link）阵列组
@@ -163,11 +125,11 @@ d3.json("getDatas", function(error, graph) {
 	   }).on("mouseout",function(d){
 	    	d3.select(this).attr("r",10);
 	   }).on("click", function(d) {
-		   var r=confirm("确定进入"+d.name+"所在的子团吗？");
-			  if (r==true)
-			    {
-				  window.parent.location.href="subCommunity?nodename="+d.name; 
-			    }
+		   //var r=confirm("确定进入"+d.name+"所在的子团吗？");
+			  //if (r==true)
+			    //{
+				  //window.parent.location.href="subConnInfo!selectPrivateInfo?privateEmail="+d.name; 
+			    //}
 		   	
 	   }).on("contextmenu", function(d) {
 		  

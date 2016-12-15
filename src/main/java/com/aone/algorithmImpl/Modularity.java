@@ -1,4 +1,4 @@
-package com.aone.algorithm;
+package com.aone.algorithmImpl;
 
 import java.awt.Font;
 import java.text.DecimalFormat;
@@ -19,13 +19,14 @@ import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import com.aone.algorithm.Community;
 
 /**
  *模块性计算
  *
  * @author zrh
  */
-public class Modularity implements Statistics, LongTask {
+public class Modularity implements Statistics, LongTask ,Community{
 
     public static final String MODULARITY_CLASS = "modularity_class";
     private ProgressTicket progress;

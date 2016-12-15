@@ -204,7 +204,8 @@
 												<strong>杨 小慧</strong>
 
 											</h3>
-											<small>四川成都</small>
+											<small>学生</small> <span rel="shortcut icon" href="./res/img/icon/location.ico"><small>四川成都</small></span>
+
 										</div>
 										<!-- 备注：根据积分的颜色变化 -->
 										<div id="fraction" class="col-lg-4 col-md-4 col-sm-4">
@@ -228,21 +229,33 @@
 											</div>
 											<div id="multicollapseOne" class="panel-collapse">
 												<div class="panel-body">
-													<table class="table table-hover">
-
+													<table class="table table-hover" style="font-size: 14px">
 														<tbody>
 															<tr>
-																<td>出生年月</td>
-																<td>1993-10-18</td>
+																<td>民族</td>
+																<td>汉</td>
 															</tr>
 															<tr>
-																<td>Jacob</td>
-																<td>Thornton</td>
+																<td>级别</td>
+																<td>1</td>
 															</tr>
 															<tr>
-																<td>Larry</td>
-																<td>the Bird</td>
+																<td>类别</td>
+																<td>特殊利益诉求群体类重点人员</td>
 															</tr>
+															<tr>
+																<td>身份证号</td>
+																<td>510106199410251245</td>
+															</tr>
+															<tr>
+																<td>现居地址</td>
+																<td>四川省 成都市 电子科技大学 13栋 505</td>
+															</tr>
+															<tr>
+																<td>包保领导</td>
+																<td>韩明皓</td>
+															</tr>
+
 														</tbody>
 													</table>
 												</div>
@@ -251,24 +264,15 @@
 										<div class="panel panel-drank">
 											<div class="panel-heading">
 												<h4 class="panel-title">
-													<a data-toggle="collapse" href="#multicollapseThree"> <strong>Multi-Collapsible</strong>
-														Group Item #3
+													<a data-toggle="collapse" href="#multicollapseThree"> <strong>诉求</strong>
 													</a>
 												</h4>
 											</div>
 											<div id="multicollapseThree" class="panel-collapse collapse">
-												<div class="panel-body">Anim pariatur cliche
-													reprehenderit, enim eiusmod high life accusamus terry
-													richardson ad squid. 3 wolf moon officia aute, non
-													cupidatat skateboard dolor brunch. Food truck quinoa
-													nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-													aliqua put a bird on it squid single-origin coffee nulla
-													assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-													craft beer labore wes anderson cred nesciunt sapiente ea
-													proident. Ad vegan excepteur butcher vice lomo. Leggings
-													occaecat craft beer farm-to-table, raw denim aesthetic
-													synth nesciunt you probably haven't heard of them accusamus
-													labore sustainable VHS.</div>
+												<ul class="list-group">
+													<li class="list-group-item">2012-01-20: 给钱</li>
+													<li class="list-group-item">2012-01-20：让娃上个好学校</li>
+												</ul>
 											</div>
 										</div>
 									</div>
@@ -475,13 +479,8 @@
 						</div>
 						<!-- /col 18 -->
 
-
-
 					</div>
 					<!-- /row -->
-
-
-
 
 				</div>
 				<!-- /content container -->

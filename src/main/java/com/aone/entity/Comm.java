@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name="k911")
 public class Comm {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="source", length = 150)
