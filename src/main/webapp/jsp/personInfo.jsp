@@ -10,7 +10,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>重要人物个人信息</title>
+<title>重要人物个人信息lalalallal</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
