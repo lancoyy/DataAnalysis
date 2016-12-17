@@ -22,10 +22,10 @@ public class Telerecord {
 	private String target;
 	
 	@Column(name="startTime", nullable = true, length = 20)
-	private Date startTime;
+	private String startTime;
 	
 	@Column(name="endTime", nullable = true, length = 20)
-	private Date endTime;
+	private String endTime;
 	
 	@Column(name="senderBaseStation", nullable = true, length = 20)
 	private Integer senderBaseStation;
@@ -72,19 +72,19 @@ public class Telerecord {
 		this.receiverSector = receiverSector;
 	}
 
-	public Date getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(Date startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 
-	public Date getEndTime() {
+	public String getEndTime() {
 		return endTime;
 	}
 
-	public void setEndTime(Date endTime) {
+	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
 
