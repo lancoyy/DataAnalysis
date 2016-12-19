@@ -141,26 +141,6 @@ public class CommController {
 					Group group = groupList.get(j);
 					if(node.getGroupId().equals(group.getGroupId())){
 						session.setAttribute("graphGroup", group);
-//						//对子团中的节点进行重要节点分析
-//						String num ="3";//默认使用pagerank算法
-//						//使用pagerank进行重要节点分析
-//						ArrayList<Nodes> nodesList = graphOperator.
-//								GraphOperator2(Integer.parseInt(num), group.getEdgeList()).getNodeList();
-//						ArrayList<Edges> al = nodeConvertNum.convertToNum(nodesList, group.getEdgeList());
-//						StringBuilder sb = nodeConvertNum.JsonDataAndWeightConvert(nodesList, (ArrayList<Edges>)al);
-//						session.setAttribute("subImportantJson",sb );
-//						Comparator<Nodes> comparator = new Comparator<Nodes>(){
-//							public int compare(Nodes n1, Nodes n2) {
-//								double nw1 = Double.parseDouble(n1.getNoteWeight());
-//								double nw2 = Double.parseDouble(n2.getNoteWeight());
-//								if(Math.abs(nw1-nw2)<1e-7)return 0;
-//								else if(nw1>nw2)return -1;
-//								else return 1; 
-//							}
-//						};
-//						//排序
-//						Collections.sort(nodesList, comparator);
-//						session.setAttribute("subImportantList", nodesList);//排序后的结果存入session
 						break;
 					}
 				}
