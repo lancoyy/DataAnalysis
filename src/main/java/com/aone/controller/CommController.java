@@ -148,7 +148,7 @@ public class CommController {
 				break;
 			}
 		}
-		session.setAttribute("getSubDatas", 1);
+		session.setAttribute("commFlag", "getSubDatas");
 		return "community";
 	}
 	

@@ -963,9 +963,6 @@
 
 
 
-	<section class="videocontent" id="video"></section>
-
-
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -1068,8 +1065,9 @@
 			.style("pointer-events", "all");
 	
 		var container = svg.append("g");
-		var commFlag=<%=session.getAttribute("commFlag")%>;
+		var commFlag="<%=session.getAttribute("commFlag")%>";
 		console.log(commFlag);
+		
 		d3.json(commFlag, function(error, graph) {
 			force
 				.nodes(graph.nodes) //获得或设置布局中的节点（node）阵列组
