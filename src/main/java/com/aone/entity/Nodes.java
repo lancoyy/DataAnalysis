@@ -5,12 +5,20 @@ package com.aone.entity;
  * @super 无
  * @type 普通java类
  */
-public class Nodes implements java.io.Serializable{
+public class Nodes{
+	int id;
 	String name;
 	String groupId;
 	String noteWeight;
 	String []alias;
 	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String[] getAlias() {
 		return alias;
 	}

@@ -615,6 +615,7 @@ public abstract class SuperDaoImpl<T> implements SuperDao<T> {
 	    public <T> List<T> findBySql(final String sql, final Object... values) {
 	        Query query = sessionFactory.getCurrentSession().createSQLQuery(sql).addEntity(clazz);
 	        for (int i = 0; i < values.length; i++) {
+	        	System.out.println(i+"--"+values[i]);
 	            query.setParameter(i, values[i]);
 	        }
 	        return query.list();

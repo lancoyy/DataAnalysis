@@ -48,7 +48,7 @@ public class CommController {
 	
 	/**
 	 * @author Joe
-     * @function 重点人物画像模块初始界面，进行数据读入、社团划分、重要节点分析
+     * @function 重点人物画像模块初始界面，进行数据读入、社团划分
 	 * @param request
 	 * @param session
 	 * @return 
@@ -75,25 +75,25 @@ public class CommController {
 //			num = "6" ： "degree";
 //			num = "7" ： "hits";
 //			num = "8" ： "eigenvector";
-			String num ="3";
-			String algorithm = "pagerank"; //默认使用pagerank算法
-			ArrayList<Nodes> nodesList = graphOperator.
-					GraphOperator2(Integer.parseInt(num), allFUNodesandEdges.getEdgeList()).getNodeList();
-			ArrayList<Edges> al = nodeConvertNum.convertToNum(nodesList, edgeList);
-			//转换成json格式:[{"name":"Majed Moqed","Nodeweight":"0.14706199855470242","group":0}..]
-			StringBuilder sb = nodeConvertNum.JsonDataAndWeightConvert(nodesList, (ArrayList<Edges>)al);
-			session.setAttribute("importantJson",sb );
-			Comparator<Nodes> comparator = new Comparator<Nodes>(){
-				public int compare(Nodes n1, Nodes n2) {
-					double nw1 = Double.parseDouble(n1.getNoteWeight());
-					double nw2 = Double.parseDouble(n2.getNoteWeight());
-					if(Math.abs(nw1-nw2)<1e-7)return 0;
-					else if(nw1>nw2)return -1;
-					else return 1; 
-				}
-			};
-			Collections.sort(nodesList, comparator);//按照权重对节点进行排序
-			session.setAttribute("importantList", nodesList);//排序后的结果存入session
+//			String num ="3";
+//			String algorithm = "pagerank"; //默认使用pagerank算法
+//			ArrayList<Nodes> nodesList = graphOperator.
+//					GraphOperator2(Integer.parseInt(num), allFUNodesandEdges.getEdgeList()).getNodeList();
+//			ArrayList<Edges> al = nodeConvertNum.convertToNum(nodesList, edgeList);
+//			//转换成json格式:[{"name":"Majed Moqed","Nodeweight":"0.14706199855470242","group":0}..]
+//			StringBuilder sb = nodeConvertNum.JsonDataAndWeightConvert(nodesList, (ArrayList<Edges>)al);
+//			session.setAttribute("importantJson",sb );
+//			Comparator<Nodes> comparator = new Comparator<Nodes>(){
+//				public int compare(Nodes n1, Nodes n2) {
+//					double nw1 = Double.parseDouble(n1.getNoteWeight());
+//					double nw2 = Double.parseDouble(n2.getNoteWeight());
+//					if(Math.abs(nw1-nw2)<1e-7)return 0;
+//					else if(nw1>nw2)return -1;
+//					else return 1; 
+//				}
+//			};
+//			Collections.sort(nodesList, comparator);//按照权重对节点进行排序
+//			session.setAttribute("importantList", nodesList);//排序后的结果存入session
 			//测试
 //			for(int i =0;i<nodesList.size();i++){
 //				System.out.println(nodesList.get(i).getName()+" : "+nodesList.get(i).getNoteWeight());
@@ -141,26 +141,26 @@ public class CommController {
 					Group group = groupList.get(j);
 					if(node.getGroupId().equals(group.getGroupId())){
 						session.setAttribute("graphGroup", group);
-						//对子团中的节点进行重要节点分析
-						String num ="3";//默认使用pagerank算法
-						//使用pagerank进行重要节点分析
-						ArrayList<Nodes> nodesList = graphOperator.
-								GraphOperator2(Integer.parseInt(num), group.getEdgeList()).getNodeList();
-						ArrayList<Edges> al = nodeConvertNum.convertToNum(nodesList, group.getEdgeList());
-						StringBuilder sb = nodeConvertNum.JsonDataAndWeightConvert(nodesList, (ArrayList<Edges>)al);
-						session.setAttribute("subImportantJson",sb );
-						Comparator<Nodes> comparator = new Comparator<Nodes>(){
-							public int compare(Nodes n1, Nodes n2) {
-								double nw1 = Double.parseDouble(n1.getNoteWeight());
-								double nw2 = Double.parseDouble(n2.getNoteWeight());
-								if(Math.abs(nw1-nw2)<1e-7)return 0;
-								else if(nw1>nw2)return -1;
-								else return 1; 
-							}
-						};
-						//排序
-						Collections.sort(nodesList, comparator);
-						session.setAttribute("subImportantList", nodesList);//排序后的结果存入session
+//						//对子团中的节点进行重要节点分析
+//						String num ="3";//默认使用pagerank算法
+//						//使用pagerank进行重要节点分析
+//						ArrayList<Nodes> nodesList = graphOperator.
+//								GraphOperator2(Integer.parseInt(num), group.getEdgeList()).getNodeList();
+//						ArrayList<Edges> al = nodeConvertNum.convertToNum(nodesList, group.getEdgeList());
+//						StringBuilder sb = nodeConvertNum.JsonDataAndWeightConvert(nodesList, (ArrayList<Edges>)al);
+//						session.setAttribute("subImportantJson",sb );
+//						Comparator<Nodes> comparator = new Comparator<Nodes>(){
+//							public int compare(Nodes n1, Nodes n2) {
+//								double nw1 = Double.parseDouble(n1.getNoteWeight());
+//								double nw2 = Double.parseDouble(n2.getNoteWeight());
+//								if(Math.abs(nw1-nw2)<1e-7)return 0;
+//								else if(nw1>nw2)return -1;
+//								else return 1; 
+//							}
+//						};
+//						//排序
+//						Collections.sort(nodesList, comparator);
+//						session.setAttribute("subImportantList", nodesList);//排序后的结果存入session
 						break;
 					}
 				}

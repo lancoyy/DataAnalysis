@@ -93,13 +93,36 @@ public class KeyPerson {
 	
 	@Column(name="isDelete", nullable = true)
 	private Integer isDelete;
+	
+	@Column(name="days", nullable = true)
+	private String days;
+	
+	@Column(name="fraction", nullable = true)
+	private String fraction;
 
-	public int getId() {
+	
+	public int getKeyPersonID() {
 		return keyPersonID;
 	}
 
-	public void setId(int keyPersonID) {
+	public void setKeyPersonID(int keyPersonID) {
 		this.keyPersonID = keyPersonID;
+	}
+
+	public String getDays() {
+		return days;
+	}
+
+	public void setDays(String days) {
+		this.days = days;
+	}
+
+	public String getFraction() {
+		return fraction;
+	}
+
+	public void setFraction(String fraction) {
+		this.fraction = fraction;
 	}
 
 	public String getName() {

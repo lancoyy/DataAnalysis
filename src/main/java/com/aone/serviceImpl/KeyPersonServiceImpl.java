@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.aone.dao.ContradictionDao;
 import com.aone.dao.KeyPersonDao;
+import com.aone.entity.Contradiction;
 import com.aone.entity.KeyPerson;
 import com.aone.service.KeyPersonService;
 
@@ -19,6 +21,10 @@ public class KeyPersonServiceImpl implements KeyPersonService{
 	@Resource
 	@Qualifier(value="keyPersonDao")
 	private KeyPersonDao keyPersonDao;
+	
+	@Resource
+	@Qualifier(value="contradictionDao")
+	private ContradictionDao contradictionDao;
 	
 	/**
 	 * @author Joe
@@ -42,7 +48,5 @@ public class KeyPersonServiceImpl implements KeyPersonService{
 	public List<KeyPerson> showPersonByPage(String propertyName,boolean desc,Integer startRow,Integer pageSize){
 		return keyPersonDao.showPersonByPageDao(propertyName, desc, startRow, pageSize);
 	}
-	
-	
 
 }
