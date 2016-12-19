@@ -67,6 +67,7 @@ public class CommController {
 			long end = 	System.currentTimeMillis();
 			System.out.println("time:"+(end - start));
 			session.setAttribute("allFNUodesandEdges", allFUNodesandEdges);
+			session.setAttribute("commFlag", "getDatas");
 			
 			//进行重要节点分析
 //			num = "3" ： "pagerank";
@@ -147,7 +148,8 @@ public class CommController {
 				break;
 			}
 		}
-		return "childGraph";
+		session.setAttribute("getSubDatas", 1);
+		return "community";
 	}
 	
 	/**

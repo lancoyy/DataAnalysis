@@ -7,33 +7,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <meta charset="utf-8">
 <style>
-
 .node {
-  stroke-width: 1.5px;
+	stroke-width: 1.5px;
 }
+
 body {
-  margin: 0;
-  background: #000;
+	margin: 0;
+	background: #000;
 }
 
 .link {
-  stroke: #09f;
-  stroke-opacity: .6;
+	stroke: #09f;
+	stroke-opacity: .6;
 }
+
 .nodetext {
-  fill: #fff;
-  font-size:12px;
-  font-family:'楷体'
-  cursor:pointer;
-  pointer-events:none;
- }
-
-
+	fill: #fff;
+	font-size: 12px;
+	font-family: '楷体' cursor : pointer;
+	pointer-events: none;
+}
 </style>
 <body>
-<script src="./res/js/d3.min.js"></script>
-<script type="text/javascript" src="./res/js/jquery-2.1.1.min.js"></script>
-<script language=javascript type=text/javascript>
+	<script src="./res/js/d3.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-2.1.1.min.js"></script>
+	<script language=javascript type=text/javascript>
 <!--
 document.oncontextmenu = function ()
 {
@@ -41,7 +39,7 @@ document.oncontextmenu = function ()
 }
 -->
 </script>
-<script>
+	<script>
 var margin = {top: -5, right: -5, bottom: -5, left: -5},
 width = 1600 - margin.left - margin.right,
 height = 750 - margin.top - margin.bottom;
@@ -83,9 +81,11 @@ var rect = svg.append("rect")
 .style("pointer-events", "all");
 
 var container = svg.append("g");
-    
-    
-d3.json("getSubDatas", function(error, graph) {
+
+var commFlag=<%=session.getAttribute("commFlag")%>;
+
+
+d3.json(commFlag, function(error, graph) {
   force
       .nodes(graph.nodes)//获得或设置布局中的节点（node）阵列组
       .links(graph.links)//获得或设置布局中节点间的连接（Link）阵列组

@@ -172,20 +172,14 @@
 
 
 				<!-- page header -->
-				<div class="pageheader">
-
-
-					<h2>
-						<i class="fa fa-tachometer"></i> Dashboard <span>// Place
-							subtitle here...</span>
-					</h2>
+				<div class="pageheader" style="height: 30px">
 
 
 					<div class="breadcrumbs">
 						<ol class="breadcrumb">
-							<li>You are here</li>
-							<li><a href="index.html">Minimal</a></li>
-							<li class="active">Dashboard</li>
+							<li style="color: #fff">你在这里</li>
+							<li><a href="#" style="color: #fff">政法委大数据分析平台</a></li>
+							<li style="color: #fff">重要人物分析</li>
 						</ol>
 					</div>
 
@@ -196,193 +190,190 @@
 				<!-- content main container -->
 				<div class="main">
 
-					<!-- cards -->
-					<div class="row cards">
-
-						<div class="card-container col-lg-3 col-sm-6 col-sm-12">
-							<div class="card card-redbrown hover">
-								<div class="front">
-
-									<div class="media">
-										<span class="pull-left"> <i
-											class="fa fa-users media-object"></i>
-										</span>
-
-										<div class="media-body">
-											<small>New Users</small>
-											<h2 class="media-heading animate-number" data-value="3659"
-												data-animation-duration="1500">0</h2>
-										</div>
-									</div>
-
-									<div class="progress-list">
-										<div class="details">
-											<div class="title">This month plan %</div>
-										</div>
-										<div class="status pull-right bg-transparent-black-1">
-											<span class="animate-number" data-value="83"
-												data-animation-duration="1500">0</span>%
-										</div>
-										<div class="clearfix"></div>
-										<div
-											class="progress progress-little progress-transparent-black">
-											<div class="progress-bar animate-progress-bar"
-												data-percentage="83%"></div>
-										</div>
-									</div>
-
-								</div>
-								<div class="back">
-									<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
-											Summary</span>
-									</a>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="card-container col-lg-3 col-sm-6 col-sm-12">
-							<div class="card card-blue hover">
-								<div class="front">
-
-									<div class="media">
-										<span class="pull-left"> <i
-											class="fa fa-shopping-cart media-object"></i>
-										</span>
-
-										<div class="media-body">
-											<small>New Orders</small>
-											<h2 class="media-heading animate-number" data-value="19214"
-												data-animation-duration="1500">0</h2>
-										</div>
-									</div>
-
-									<div class="progress-list">
-										<div class="details">
-											<div class="title">This month plan %</div>
-										</div>
-										<div class="status pull-right bg-transparent-black-1">
-											<span class="animate-number" data-value="100"
-												data-animation-duration="1500">0</span>%
-										</div>
-										<div class="clearfix"></div>
-										<div
-											class="progress progress-little progress-transparent-black">
-											<div class="progress-bar animate-progress-bar"
-												data-percentage="100%"></div>
-										</div>
-									</div>
-
-								</div>
-								<div class="back">
-									<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
-											Summary</span>
-									</a>
-								</div>
-							</div>
-						</div>
-
-
-
-						<div class="card-container col-lg-3 col-sm-6 col-sm-12">
-							<div class="card card-greensea hover">
-								<div class="front">
-
-									<div class="media">
-										<span class="pull-left"> <i
-											class="fa fa-usd media-object"></i>
-										</span>
-
-										<div class="media-body">
-											<small>Sales</small>
-											<h2 class="media-heading animate-number" data-value="169541"
-												data-animation-duration="1500">0</h2>
-										</div>
-									</div>
-
-									<div class="progress-list">
-										<div class="details">
-											<div class="title">This month plan %</div>
-										</div>
-										<div class="status pull-right bg-transparent-black-1">
-											<span class="animate-number" data-value="42"
-												data-animation-duration="1500">0</span>%
-										</div>
-										<div class="clearfix"></div>
-										<div
-											class="progress progress-little progress-transparent-black">
-											<div class="progress-bar animate-progress-bar"
-												data-percentage="42%"></div>
-										</div>
-									</div>
-
-								</div>
-								<div class="back">
-									<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
-											Summary</span>
-									</a>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="card-container col-lg-3 col-sm-6 col-xs-12">
-							<div class="card card-slategray hover">
-								<div class="front">
-
-									<div class="media">
-										<span class="pull-left"> <i
-											class="fa fa-eye media-object"></i>
-										</span>
-
-										<div class="media-body">
-											<small>Visits</small>
-											<h2 class="media-heading animate-number" data-value="9634"
-												data-animation-duration="1500">0</h2>
-										</div>
-									</div>
-
-									<div class="progress-list">
-										<div class="details">
-											<div class="title">This month plan %</div>
-										</div>
-										<div class="status pull-right bg-transparent-black-1">
-											<span class="animate-number" data-value="25"
-												data-animation-duration="1500">0</span>%
-										</div>
-										<div class="clearfix"></div>
-										<div
-											class="progress progress-little progress-transparent-black">
-											<div class="progress-bar animate-progress-bar"
-												data-percentage="25%"></div>
-										</div>
-									</div>
-
-								</div>
-								<div class="back">
-									<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
-											Summary</span>
-									</a>
-								</div>
-							</div>
-						</div>
-
-
-					</div>
-					<!-- /cards -->
-
-
-
-
 					<!-- row -->
 					<div class="row">
+						<!-- col 3 -->
+						<div class="col-lg-3 col-md-12">
+							<!-- cards -->
+							<div class="row cards">
+
+								<div class="card-container">
+									<div class="card card-redbrown hover">
+										<div class="front">
+
+											<div class="media">
+												<span class="pull-left"> <i
+													class="fa fa-users media-object"></i>
+												</span>
+
+												<div class="media-body">
+													<small>New Users</small>
+													<h2 class="media-heading animate-number" data-value="3659"
+														data-animation-duration="1500">0</h2>
+												</div>
+											</div>
+
+											<div class="progress-list">
+												<div class="details">
+													<div class="title">This month plan %</div>
+												</div>
+												<div class="status pull-right bg-transparent-black-1">
+													<span class="animate-number" data-value="83"
+														data-animation-duration="1500">0</span>%
+												</div>
+												<div class="clearfix"></div>
+												<div
+													class="progress progress-little progress-transparent-black">
+													<div class="progress-bar animate-progress-bar"
+														data-percentage="83%"></div>
+												</div>
+											</div>
+
+										</div>
+										<div class="back">
+											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
+													Summary</span>
+											</a>
+										</div>
+									</div>
+								</div>
 
 
-						<!-- col 8 -->
-						<div class="col-lg-8 col-md-12">
+								<div class="card-container">
+									<div class="card card-blue hover">
+										<div class="front">
+
+											<div class="media">
+												<span class="pull-left"> <i
+													class="fa fa-shopping-cart media-object"></i>
+												</span>
+
+												<div class="media-body">
+													<small>New Orders</small>
+													<h2 class="media-heading animate-number" data-value="19214"
+														data-animation-duration="1500">0</h2>
+												</div>
+											</div>
+
+											<div class="progress-list">
+												<div class="details">
+													<div class="title">This month plan %</div>
+												</div>
+												<div class="status pull-right bg-transparent-black-1">
+													<span class="animate-number" data-value="100"
+														data-animation-duration="1500">0</span>%
+												</div>
+												<div class="clearfix"></div>
+												<div
+													class="progress progress-little progress-transparent-black">
+													<div class="progress-bar animate-progress-bar"
+														data-percentage="100%"></div>
+												</div>
+											</div>
+
+										</div>
+										<div class="back">
+											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
+													Summary</span>
+											</a>
+										</div>
+									</div>
+								</div>
 
 
 
+								<div class="card-container ">
+									<div class="card card-greensea hover">
+										<div class="front">
+
+											<div class="media">
+												<span class="pull-left"> <i
+													class="fa fa-usd media-object"></i>
+												</span>
+
+												<div class="media-body">
+													<small>Sales</small>
+													<h2 class="media-heading animate-number"
+														data-value="169541" data-animation-duration="1500">0</h2>
+												</div>
+											</div>
+
+											<div class="progress-list">
+												<div class="details">
+													<div class="title">This month plan %</div>
+												</div>
+												<div class="status pull-right bg-transparent-black-1">
+													<span class="animate-number" data-value="42"
+														data-animation-duration="1500">0</span>%
+												</div>
+												<div class="clearfix"></div>
+												<div
+													class="progress progress-little progress-transparent-black">
+													<div class="progress-bar animate-progress-bar"
+														data-percentage="42%"></div>
+												</div>
+											</div>
+
+										</div>
+										<div class="back">
+											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
+													Summary</span>
+											</a>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="card-container">
+									<div class="card card-slategray hover">
+										<div class="front">
+
+											<div class="media">
+												<span class="pull-left"> <i
+													class="fa fa-eye media-object"></i>
+												</span>
+
+												<div class="media-body">
+													<small>Visits</small>
+													<h2 class="media-heading animate-number" data-value="9634"
+														data-animation-duration="1500">0</h2>
+												</div>
+											</div>
+
+											<div class="progress-list">
+												<div class="details">
+													<div class="title">This month plan %</div>
+												</div>
+												<div class="status pull-right bg-transparent-black-1">
+													<span class="animate-number" data-value="25"
+														data-animation-duration="1500">0</span>%
+												</div>
+												<div class="clearfix"></div>
+												<div
+													class="progress progress-little progress-transparent-black">
+													<div class="progress-bar animate-progress-bar"
+														data-percentage="25%"></div>
+												</div>
+											</div>
+
+										</div>
+										<div class="back">
+											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
+													Summary</span>
+											</a>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+							<!-- /cards -->
+						</div>
+						<!-- /col 3 -->
+
+
+						<!-- col 6 -->
+						<div class="col-lg-6 col-md-12">
 
 							<!-- tile -->
 							<section class="tile transparent">
@@ -413,12 +404,12 @@
 
 
 						</div>
-						<!-- /col 8 -->
+						<!-- /col 6 -->
 
 
 
-						<!-- col 4 -->
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<!-- col 3 -->
+						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 
 							<!-- tile -->
 							<section class="tile transparent">
@@ -556,7 +547,7 @@
 
 
 						</div>
-						<!-- /col 4 -->
+						<!-- /col 3 -->
 
 
 					</div>
@@ -1018,175 +1009,15 @@
 	<!-- 
 	<script type="text/javascript" src="./res/js/jquery-2.1.1.min.js"></script>
  -->
-
 	<script>
-    $(function(){
-
-      // Initialize card flip
-      $('.card.hover').hover(function(){
-        $(this).addClass('flip');
-      },function(){
-        $(this).removeClass('flip');
-      });
-
-
-      $(window).resize(function() {
-        // redraw the graph in the correctly sized div
-        plot.resize();
-        plot.setupGrid();
-        plot.draw();
-      });
-
-      $('#mmenu').on(
-        "opened.mm",
-        function()
-        {
-          // redraw the graph in the correctly sized div
-          plot.resize();
-          plot.setupGrid();
-          plot.draw();
-        }
-      );
-
-      $('#mmenu').on(
-        "closed.mm",
-        function()
-        {
-          // redraw the graph in the correctly sized div
-          plot.resize();
-          plot.setupGrid();
-          plot.draw();
-        }
-      );
-
-      // tooltips showing
-      $("#statistics-chart").bind("plothover", function (event, pos, item) {
-        if (item) {
-          var x = item.datapoint[0],
-              y = item.datapoint[1];
-
-          $("#tooltip").html('<h1 style="color: #418bca">' + months[x - 1] + '</h1>' + '<strong>' + y + '</strong>' + ' ' + item.series.label)
-            .css({top: item.pageY-30, left: item.pageX+5})
-            .fadeIn(200);
-        } else {
-          $("#tooltip").hide();
-        }
-      });
-
-      
-      //tooltips options
-      $("<div id='tooltip'></div>").css({
-        position: "absolute",
-        //display: "none",
-        padding: "10px 20px",
-        "background-color": "#ffffff",
-        "z-index":"99999"
-      }).appendTo("body");
-
-      //generate actual pie charts
-      $('.pie-chart').easyPieChart();
-
-
-      //server load rickshaw chart
-      var graph;
-
-      var seriesData = [ [], []];
-      var random = new Rickshaw.Fixtures.RandomData(50);
-
-      for (var i = 0; i < 50; i++) {
-        random.addData(seriesData);
-      }
-
-      graph = new Rickshaw.Graph( {
-        element: document.querySelector("#serverload-chart"),
-        height: 150,
-        renderer: 'area',
-        series: [
-          {
-            data: seriesData[0],
-            color: '#6e6e6e',
-            name:'File Server'
-          },{
-            data: seriesData[1],
-            color: '#fff',
-            name:'Mail Server'
-          }
-        ]
-      } );
-
-      var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-        graph: graph,
-      });
-
-      setInterval( function() {
-        random.removeData(seriesData);
-        random.addData(seriesData);
-        graph.update();
-
-      },1000);
-
-      // Morris donut chart
-      Morris.Donut({
-        element: 'browser-usage',
-        data: [
-          {label: "Chrome", value: 25},
-          {label: "Safari", value: 20},
-          {label: "Firefox", value: 15},
-          {label: "Opera", value: 5},
-          {label: "Internet Explorer", value: 10},
-          {label: "Other", value: 25}
-        ],
-        colors: ['#00a3d8', '#2fbbe8', '#72cae7', '#d9544f', '#ffc100', '#1693A5']
-      });
-
-      $('#browser-usage').find("path[stroke='#ffffff']").attr('stroke', 'rgba(0,0,0,0)');
-
-      //sparkline charts
-      $('#projectbar1').sparkline('html', {type: 'bar', barColor: '#22beef', barWidth: 4, height: 20});
-      $('#projectbar2').sparkline('html', {type: 'bar', barColor: '#cd97eb', barWidth: 4, height: 20});
-      $('#projectbar3').sparkline('html', {type: 'bar', barColor: '#a2d200', barWidth: 4, height: 20});
-      $('#projectbar4').sparkline('html', {type: 'bar', barColor: '#ffc100', barWidth: 4, height: 20});
-      $('#projectbar5').sparkline('html', {type: 'bar', barColor: '#ff4a43', barWidth: 4, height: 20});
-      $('#projectbar6').sparkline('html', {type: 'bar', barColor: '#a2d200', barWidth: 4, height: 20});
-
-      // sortable table
-      $('.table.table-sortable th.sortable').click(function() {
-        var o = $(this).hasClass('sort-asc') ? 'sort-desc' : 'sort-asc';
-        $('th.sortable').removeClass('sort-asc').removeClass('sort-desc');
-        $(this).addClass(o);
-      });
-
-      //todo's
-      $('#todolist li label').click(function() {
-        $(this).toggleClass('done');
-      });
-
-      // Initialize tabDrop
-      $('.tabdrop').tabdrop({text: '<i class="fa fa-th-list"></i>'});
-
-      //load wysiwyg editor
-      $('#quick-message-content').summernote({
-        toolbar: [
-          //['style', ['style']], // no style button
-          ['style', ['bold', 'italic', 'underline', 'clear']],
-          ['fontsize', ['fontsize']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['height', ['height']],
-          //['insert', ['picture', 'link']], // no insert buttons
-          //['table', ['table']], // no table button
-          //['help', ['help']] //no help button
-        ],
-        height: 143   //set editable area's height
-      });
-
-      //multiselect input
-      $(".chosen-select").chosen({disable_search_threshold: 10});
-      
-    })
-      
-    </script>
-
+		$(function() {
+			$('.card.hover').hover(function() {
+				$(this).addClass('flip');
+			}, function() {
+				$(this).removeClass('flip');
+			});
+		})
+	</script>
 	<script>
 		var margin = {
 				top : -5,
@@ -1194,8 +1025,9 @@
 				bottom : -5,
 				left : -5
 			},
-			width = 1700 - margin.left - margin.right,
-			height = 768 - margin.top - margin.bottom;
+			width = document.getElementById("statistics-chart").offsetWidth,
+	
+			height = document.getElementById("statistics-chart").offsetHeight;
 	
 		var zoom = d3.behavior.zoom()
 			.scaleExtent([ 0.3, 10 ])
@@ -1210,14 +1042,16 @@
 			.on("dragend", dragended);
 	
 	
+	
+		/* var width = 845,
+		    height = 630; */
+	
 		var color = d3.scale.category20();
+		//var color = [ "#1f77b4", "#8C0044", "#A42D00", "#886600", "#668800", "#008800", "#8c6d31", "#770077", "#AA0000", "#CC6600", "#00AA00", "#00AA88", "#227700", "#000088", "#FF0000" ];
 	
 		var force = d3.layout.force()
-			.charge(-200) // 获取或设置节点的电荷数.(电荷数决定结点是互相排斥还是吸引)
-			.linkDistance(20) // 获取或设置节点间的连接线距离.
-			.linkStrength(0)
-			.friction(0.9)
-			.gravity(0.01)
+			.charge(-700) // 获取或设置节点的电荷数.(电荷数决定结点是互相排斥还是吸引)
+			.linkDistance(200) // 获取或设置节点间的连接线距离.
 			.size([ width, height ]); //获取或设置布局的 宽 和 高 的大小.
 	
 		var svg = d3.select("#statistics-chart").append("svg")
@@ -1234,47 +1068,14 @@
 			.style("pointer-events", "all");
 	
 		var container = svg.append("g");
-	
-	
-		/*****************************/
-		var group = new Array();
-	
-		var sizeofGroup;
-		//根据groupId 获取聚集点坐标, 分4列显示
-	
-		var COLUMNS = 4;
-		var SocityWidth = ~~(width / COLUMNS);
-	
-		var fixedCenterX = new Array();
-		fixedCenterX.push(~~(SocityWidth / 2));
-	
-		for (var i = 1; i < COLUMNS; ++i) {
-			fixedCenterX.push(fixedCenterX[fixedCenterX.length - 1] + SocityWidth);
-		}
-	
-		var getCenterY = function(id) {
-			return (~~(SocityWidth / 2)) + Math.floor(id / COLUMNS) * SocityWidth;
-		};
-		var getCenterX = function(id) {
-			return fixedCenterX[id % COLUMNS];
-		};
-		//alert(getCenterX(0)+" "+getCenterX(1)+" "+getCenterX(2));
-		//Console.log(fixedCenterX[0]);
-		/*****************************/
-	
-		d3.json("getDatas", function(error, graph) {
+		var commFlag=<%=session.getAttribute("commFlag")%>;
+		console.log(commFlag);
+		d3.json(commFlag, function(error, graph) {
 			force
 				.nodes(graph.nodes) //获得或设置布局中的节点（node）阵列组
 				.links(graph.links) //获得或设置布局中节点间的连接（Link）阵列组
 				.start();
-			//得到社团数量，供系统自适应高度
-			sizeofGroup = 0;
-			for (var node in graph.nodes) {
-				sizeofGroup = Math.max(sizeofGroup, graph.nodes[node].group);
-				group.push(graph.nodes[node].group);
-			}
-			//log(sizeofGroup);
-			height = getCenterY(sizeofGroup - 1) + (~~(SocityWidth / 2));
+	
 			//定义连线
 			var link = container.selectAll(".link")
 				.data(graph.links)
@@ -1311,9 +1112,9 @@
 				}).on("mouseout", function(d) {
 				d3.select(this).attr("r", 10);
 			}).on("click", function(d) {
-				var r = confirm("确定进入" + d.name + "团吗？");
+				var r = confirm("确定进入" + d.name + "所在的子团吗？");
 				if (r == true) {
-					window.parent.location.href = "graph!searchByName?nodename=" + d.name;
+					window.parent.location.href = "subCommunity?nodename=" + d.name;
 				}
 	
 			}).on("contextmenu", function(d) {
@@ -1348,14 +1149,7 @@
 			});
 	
 			//开始力学动作
-			force.on("tick", function(e) {
-				var k = .2 * e.alpha;
-				graph.nodes.forEach(function(o, i) {
-					//alert(getCenterX(group[i])+"  "+getCenterY(group[i]));
-					o.y += (getCenterY(group[i]) - o.y) * k;
-					o.x += (getCenterX(group[i]) - o.x) * k;
-				});
-	
+			force.on("tick", function() {
 				link.attr("x1", function(d) {
 					return d.source.x;
 				})
@@ -1381,7 +1175,6 @@
 			return d;
 		}
 	
-		
 		function zoomed() {
 			container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
 		}

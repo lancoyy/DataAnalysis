@@ -157,13 +157,14 @@
 
 
 				<!-- page header -->
-				<div class="pageheader" style="height: 20px">
+				<div class="pageheader" style="height: 30px">
 
 					<div class="breadcrumbs">
 						<ol class="breadcrumb">
-							<li>你在这里</li>
+							<li style="color: #fff">你在这里	</li>
 							<li><a href="#" style="color: #fff">政法委大数据分析平台</a></li>
-							<li class="active">重要人物分析</li>
+							<li><a href="#" style="color: #fff">重要人物分析</a></li>
+							<li style="color: #fff">重要人物信息展示</li>
 						</ol>
 					</div>
 

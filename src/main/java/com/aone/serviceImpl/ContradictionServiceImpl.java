@@ -5,11 +5,16 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.aone.dao.ContradictionDao;
 import com.aone.entity.Contradiction;
+import com.aone.service.ContradictionService;
 
-public class ContradictionServiceImpl {
+@Service(value="contradictionService")
+@Transactional
+public class ContradictionServiceImpl implements ContradictionService {
 
 	@Resource
 	@Qualifier(value="contradictionDao")

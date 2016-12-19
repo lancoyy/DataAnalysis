@@ -41,8 +41,8 @@ public class KeyPersonController {
 	GraphOperator graphOperator;
 	
 	@Autowired
-	@Qualifier(value="contradictionDao")
-	ContradictionService contradictionDao;
+	@Qualifier(value="contradictionService")
+	ContradictionService contradictionService;
 	
 	
 	/**
@@ -94,7 +94,7 @@ public class KeyPersonController {
 			}
 		}
 		//获得该重要人员的事件信息
-		session.setAttribute("Contradictions", contradictionDao.findContradictionsByPerson(id));
+		session.setAttribute("Contradictions", contradictionService.findContradictionsByPerson(id));
 		
 	}
 	
