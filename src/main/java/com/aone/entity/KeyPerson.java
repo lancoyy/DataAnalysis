@@ -10,97 +10,96 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="keyperson")
+@Table(name = "keyperson")
 public class KeyPerson {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int keyPersonID;
-	
-	@Column(name="keypersonname", nullable = true, length = 50)
-	private String name;
-	
-	@Column(name="category", nullable = true)
+
+	@Column(name = "keypersonname", nullable = true, length = 50)
+	private String keypersonname;
+
+	@Column(name = "category", nullable = true)
 	private String category;
-	
-	@Column(name="level", nullable = true)
+
+	@Column(name = "level", nullable = true)
 	private String level;
-	
-	@Column(name="popedom", nullable = true)
+
+	@Column(name = "popedom", nullable = true)
 	private String popedom;
-	
-	@Column(name="jobName", nullable = true)
+
+	@Column(name = "jobName", nullable = true)
 	private String jobName;
-	
-	@Column(name="leader", nullable = true)
+
+	@Column(name = "leader", nullable = true)
 	private String leader;
-	
-	@Column(name="responsibleID", nullable = true)
+
+	@Column(name = "responsibleID", nullable = true)
 	private Integer responsibleID;
-	
-	@Column(name="contactInformation", nullable = true)
+
+	@Column(name = "contactInformation", nullable = true)
 	private String contactInformation;
-	
-	@Column(name="dynamics", nullable = true)
+
+	@Column(name = "dynamics", nullable = true)
 	private String dynamics;
-	
-	@Column(name="sex", nullable = true)
+
+	@Column(name = "sex", nullable = true)
 	private String sex;
-	
-	@Column(name="nation", nullable = true)
+
+	@Column(name = "nation", nullable = true)
 	private String nation;
-	
-	@Column(name="birth", nullable = true)
+
+	@Column(name = "birth", nullable = true)
 	private String birth;
-	
-	@Column(name="address", nullable = true)
+
+	@Column(name = "address", nullable = true)
 	private String address;
-	
-	@Column(name="idNum", nullable = true)
+
+	@Column(name = "idNum", nullable = true)
 	private String idNum;
-	
-	@Column(name="photo", nullable = true)
+
+	@Column(name = "photo", nullable = true)
 	private String photo;
-	
-	@Column(name="attachment", nullable = true)
+
+	@Column(name = "attachment", nullable = true)
 	private String attachment;
-	
-	@Column(name="ask", nullable = true)
+
+	@Column(name = "ask", nullable = true)
 	private String ask;
-	
-	@Column(name="issueProperty", nullable = true)
+
+	@Column(name = "issueProperty", nullable = true)
 	private String issueProperty;
-	
-	@Column(name="issueContent", nullable = true)
+
+	@Column(name = "issueContent", nullable = true)
 	private String issueContent;
-	
-	@Column(name="territory", nullable = true)
+
+	@Column(name = "territory", nullable = true)
 	private String territory;
-	
-	@Column(name="directorDepartment", nullable = true)
+
+	@Column(name = "directorDepartment", nullable = true)
 	private String directorDepartment;
-	
-	@Column(name="addTime", nullable = true)
+
+	@Column(name = "addTime", nullable = true)
 	private Date addTime;
-	
-	@Column(name="addBy", nullable = true)
+
+	@Column(name = "addBy", nullable = true)
 	private String addBy;
-	
-	@Column(name="lastUpdateTime", nullable = true)
+
+	@Column(name = "lastUpdateTime", nullable = true)
 	private Date lastUpdateTime;
-	
-	@Column(name="lastUpdateBy", nullable = true)
+
+	@Column(name = "lastUpdateBy", nullable = true)
 	private String lastUpdateBy;
-	
-	@Column(name="isDelete", nullable = true)
+
+	@Column(name = "isDelete", nullable = true)
 	private Integer isDelete;
-	
-	@Column(name="days", nullable = true)
+
+	@Column(name = "days", nullable = true)
 	private String days;
-	
-	@Column(name="fraction", nullable = true)
+
+	@Column(name = "fraction", nullable = true)
 	private String fraction;
 
-	
 	public int getKeyPersonID() {
 		return keyPersonID;
 	}
@@ -125,12 +124,12 @@ public class KeyPerson {
 		this.fraction = fraction;
 	}
 
-	public String getName() {
-		return name;
+	public String getKeypersonname() {
+		return keypersonname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setKeypersonname(String keypersonname) {
+		this.keypersonname = keypersonname;
 	}
 
 	public String getCategory() {
@@ -332,6 +331,5 @@ public class KeyPerson {
 	public void setIsDelete(Integer isDelete) {
 		this.isDelete = isDelete;
 	}
-	
-	
+
 }

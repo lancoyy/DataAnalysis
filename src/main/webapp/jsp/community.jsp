@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -198,39 +199,9 @@
 							<div class="row cards">
 
 								<div class="card-container">
-									<div class="card card-redbrown hover">
-										<div class="front">
-
-											<div class="media">
-												<span class="pull-left"> <i
-													class="fa fa-users media-object"></i>
-												</span>
-
-												<div class="media-body">
-													<small>New Users</small>
-													<h2 class="media-heading animate-number" data-value="3659"
-														data-animation-duration="1500">0</h2>
-												</div>
-											</div>
-
-											<div class="progress-list">
-												<div class="details">
-													<div class="title">This month plan %</div>
-												</div>
-												<div class="status pull-right bg-transparent-black-1">
-													<span class="animate-number" data-value="83"
-														data-animation-duration="1500">0</span>%
-												</div>
-												<div class="clearfix"></div>
-												<div
-													class="progress progress-little progress-transparent-black">
-													<div class="progress-bar animate-progress-bar"
-														data-percentage="83%"></div>
-												</div>
-											</div>
-
-										</div>
-										<div class="back">
+									<div class="card card-greensea hover">
+										<div class="front" style="height: 200px"></div>
+										<div class="back" style="height: 200px">
 											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
 													Summary</span>
 											</a>
@@ -241,38 +212,8 @@
 
 								<div class="card-container">
 									<div class="card card-blue hover">
-										<div class="front">
-
-											<div class="media">
-												<span class="pull-left"> <i
-													class="fa fa-shopping-cart media-object"></i>
-												</span>
-
-												<div class="media-body">
-													<small>New Orders</small>
-													<h2 class="media-heading animate-number" data-value="19214"
-														data-animation-duration="1500">0</h2>
-												</div>
-											</div>
-
-											<div class="progress-list">
-												<div class="details">
-													<div class="title">This month plan %</div>
-												</div>
-												<div class="status pull-right bg-transparent-black-1">
-													<span class="animate-number" data-value="100"
-														data-animation-duration="1500">0</span>%
-												</div>
-												<div class="clearfix"></div>
-												<div
-													class="progress progress-little progress-transparent-black">
-													<div class="progress-bar animate-progress-bar"
-														data-percentage="100%"></div>
-												</div>
-											</div>
-
-										</div>
-										<div class="back">
+										<div class="front" style="height: 200px"></div>
+										<div class="back" style="height: 200px">
 											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
 													Summary</span>
 											</a>
@@ -283,81 +224,9 @@
 
 
 								<div class="card-container ">
-									<div class="card card-greensea hover">
-										<div class="front">
-
-											<div class="media">
-												<span class="pull-left"> <i
-													class="fa fa-usd media-object"></i>
-												</span>
-
-												<div class="media-body">
-													<small>Sales</small>
-													<h2 class="media-heading animate-number"
-														data-value="169541" data-animation-duration="1500">0</h2>
-												</div>
-											</div>
-
-											<div class="progress-list">
-												<div class="details">
-													<div class="title">This month plan %</div>
-												</div>
-												<div class="status pull-right bg-transparent-black-1">
-													<span class="animate-number" data-value="42"
-														data-animation-duration="1500">0</span>%
-												</div>
-												<div class="clearfix"></div>
-												<div
-													class="progress progress-little progress-transparent-black">
-													<div class="progress-bar animate-progress-bar"
-														data-percentage="42%"></div>
-												</div>
-											</div>
-
-										</div>
-										<div class="back">
-											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
-													Summary</span>
-											</a>
-										</div>
-									</div>
-								</div>
-
-
-								<div class="card-container">
-									<div class="card card-slategray hover">
-										<div class="front">
-
-											<div class="media">
-												<span class="pull-left"> <i
-													class="fa fa-eye media-object"></i>
-												</span>
-
-												<div class="media-body">
-													<small>Visits</small>
-													<h2 class="media-heading animate-number" data-value="9634"
-														data-animation-duration="1500">0</h2>
-												</div>
-											</div>
-
-											<div class="progress-list">
-												<div class="details">
-													<div class="title">This month plan %</div>
-												</div>
-												<div class="status pull-right bg-transparent-black-1">
-													<span class="animate-number" data-value="25"
-														data-animation-duration="1500">0</span>%
-												</div>
-												<div class="clearfix"></div>
-												<div
-													class="progress progress-little progress-transparent-black">
-													<div class="progress-bar animate-progress-bar"
-														data-percentage="25%"></div>
-												</div>
-											</div>
-
-										</div>
-										<div class="back">
+									<div class="card card-redbrown hover">
+										<div class="front" style="height: 200px"></div>
+										<div class="back" style="height: 200px">
 											<a href="#"> <i class="fa fa-bar-chart-o fa-4x"></i> <span>Check
 													Summary</span>
 											</a>
@@ -392,7 +261,7 @@
 								<!-- tile widget -->
 								<div class="tile-widget color transparent-black textured">
 									<div id="statistics-chart" class="chart statistics"
-										style="height: 520px;"></div>
+										style="height: 550px;"></div>
 								</div>
 								<!-- /tile widget -->
 							</section>
@@ -429,116 +298,36 @@
 								<!-- tile body -->
 								<div
 									class="tile-body color transparent-black rounded-bottom-corners">
-									<input type="text" placeholder="Add new todo..."
+									<input type="text" placeholder="输入重要人员姓名..."
 										class="w100p bottommargin">
 
-
-									<ul class="users-list">
-
-										<li class="online">
-											<div class="media">
-												<a class="pull-left profile-photo" href="#"> <img
-													class="media-object" src="./res/img/ici-avatar.jpg" alt
-													style="width:45px; border-radius: 50%; padding-bottom:3px;">
-												</a>
-												<div class="media-body">
-													<h6 class="media-heading">
-														Ing. Imrich <strong>Kamarel</strong>
-													</h6>
-													<small><i class="fa fa-map-marker"></i>
-														Ulaanbaatar, Mongolia</small> <span
-														class="badge badge-outline status"></span>
+									<c:forEach items="${PersonList}" var="person">
+										<ul>
+											<li class="online">
+												<div class="media">
+													<a class="pull-left profile-photo" href="#"> <img
+														class="media-object" src="./res/img/ici-avatar.jpg" alt
+														style="width:45px; border-radius: 50%; padding-bottom:3px;">
+													</a>
+													<div class="media-body">
+														<h6 class="media-heading">
+															<strong><a href="searchById?id=${person.keyPersonID}">${person.keypersonname}</a></strong>
+														</h6>
+														<small><i class="fa fa-map-marker"></i>
+															${person.popedom}</small> <span
+															class="badge badge-outline status"></span>
+													</div>
 												</div>
-											</div>
-										</li>
-
-										<li class="online">
-											<div class="media">
-
-												<a class="pull-left profile-photo" href="#"> <img
-													class="media-object" src="./res/img/arnold-avatar.jpg" alt
-													style="width:45px; border-radius: 50%; padding-bottom:3px;">
-												</a>
-
-
-												<div class="media-body">
-													<h6 class="media-heading">
-														Arnold <strong>Karlsberg</strong>
-													</h6>
-													<small><i class="fa fa-map-marker"></i> Bratislava,
-														Slovakia</small> <span class="badge badge-outline status"></span>
-												</div>
-
-											</div>
-										</li>
-
-										<li class="online">
-											<div class="media">
-												<a class="pull-left profile-photo" href="#"> <img
-													class="media-object" src="./res/img/peter-avatar.jpg" alt
-													style="width:45px; border-radius: 50%; padding-bottom:3px;">
-
-												</a>
-												<div class="media-body">
-													<h6 class="media-heading">
-														Peter <strong>Kay</strong>
-													</h6>
-													<small><i class="fa fa-map-marker"></i> Kosice,
-														Slovakia</small> <span class="badge badge-outline status"></span>
-												</div>
-											</div>
-										</li>
-
-										<li class="online">
-											<div class="media">
-												<a class="pull-left profile-photo" href="#"> <img
-													class="media-object" src="./res/img/george-avatar.jpg" alt
-													style="width:45px; border-radius: 50%; padding-bottom:3px;">
-												</a>
-												<div class="media-body">
-													<h6 class="media-heading">
-														George <strong>McCain</strong>
-													</h6>
-													<small><i class="fa fa-map-marker"></i> Prague,
-														Czech Republic</small> <span class="badge badge-outline status"></span>
-												</div>
-											</div>
-										</li>
-
-										<li class="busy">
-											<div class="media">
-												<a class="pull-left profile-photo" href="#"> <img
-													class="media-object" src="./res/img/random-avatar1.jpg" alt
-													style="width:45px; border-radius: 50%; padding-bottom:3px;">
-												</a>
-												<div class="media-body">
-													<h6 class="media-heading">
-														Lucius <strong>Cashmere</strong>
-													</h6>
-													<small><i class="fa fa-map-marker"></i> Wien,
-														Austria</small> <span class="badge badge-outline status"></span>
-												</div>
-											</div>
-										</li>
-
-										<li class="busy">
-											<div class="media">
-												<a class="pull-left profile-photo" href="#"> <img
-													class="media-object" src="./res/img/random-avatar2.jpg" alt
-													style="width:45px; border-radius: 50%; padding-bottom:3px;">
-												</a>
-												<div class="media-body">
-													<h6 class="media-heading">
-														Jesse <strong>Phoenix</strong>
-													</h6>
-													<small><i class="fa fa-map-marker"></i> Berlin,
-														Germany</small> <span class="badge badge-outline status"></span>
-												</div>
-											</div>
-										</li>
-
+											</li>
+										</ul>
+									</c:forEach>
+									<ul class="pager pager-custom">
+										<li><a id="previous"><i
+												class="fa fa-angle-left"></i></a></li>
+										<li class="active">${page}</li>
+										<li><a id="next"><i
+												class="fa fa-angle-right"></i></a></li>
 									</ul>
-
 
 								</div>
 								<!-- /tile body -->
@@ -564,392 +353,8 @@
 				<!-- /content container -->
 
 
-
-
-
-
 			</div>
 			<!-- Page content end -->
-
-
-
-
-			<div id="mmenu" class="right-panel">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs nav-justified">
-					<li class="active"><a href="#mmenu-users" data-toggle="tab"><i
-							class="fa fa-users"></i></a></li>
-					<li class=""><a href="#mmenu-history" data-toggle="tab"><i
-							class="fa fa-clock-o"></i></a></li>
-					<li class=""><a href="#mmenu-friends" data-toggle="tab"><i
-							class="fa fa-heart"></i></a></li>
-					<li class=""><a href="#mmenu-settings" data-toggle="tab"><i
-							class="fa fa-gear"></i></a></li>
-				</ul>
-
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane active" id="mmenu-users">
-						<h5>
-							<strong>Online</strong> Users
-						</h5>
-
-						<ul class="users-list">
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/ici-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Ing. Imrich <strong>Kamarel</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Ulaanbaatar,
-											Mongolia</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/arnold-avatar.jpg" alt>
-									</a>
-
-									<div class="media-body">
-										<h6 class="media-heading">
-											Arnold <strong>Karlsberg</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Bratislava,
-											Slovakia</small> <span class="badge badge-outline status"></span>
-									</div>
-
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/peter-avatar.jpg" alt>
-
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Peter <strong>Kay</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Kosice,
-											Slovakia</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/george-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											George <strong>McCain</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Prague, Czech
-											Republic</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar1.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Lucius <strong>Cashmere</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Wien, Austria</small>
-										<span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar2.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Jesse <strong>Phoenix</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Berlin,
-											Germany</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-
-
-
-					</div>
-
-					<div class="tab-pane" id="mmenu-history">
-						<h5>
-							<strong>Chat</strong> History
-						</h5>
-
-						<ul class="history-list">
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/ici-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Ing. Imrich <strong>Kamarel</strong>
-										</h6>
-										<small>Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit, sed do eiusmod tempor</small> <span
-											class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-
-									<a class="pull-left profile-photo" href="#" style="witdh:45px">
-										<img class="media-object" src="./res/img/arnold-avatar.jpg"
-										alt>
-									</a>
-
-									<div class="media-body">
-										<h6 class="media-heading">
-											Arnold <strong>Karlsberg</strong>
-										</h6>
-										<small>Duis aute irure dolor in reprehenderit in
-											voluptate velit esse cillum dolore eu fugiat nulla pariatur</small> <span
-											class="badge badge-outline status"></span>
-									</div>
-
-								</div>
-							</li>
-
-							<li class="offline">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/peter-avatar.jpg" alt>
-
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Peter <strong>Kay</strong>
-										</h6>
-										<small>Excepteur sint occaecat cupidatat non proident,
-											sunt in culpa qui officia deserunt mollit </small> <span
-											class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-
-					</div>
-
-					<div class="tab-pane" id="mmenu-friends">
-						<h5>
-							<strong>Friends</strong> List
-						</h5>
-						<ul class="favourite-list">
-
-							<li class="online">
-								<div class="media">
-
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/arnold-avatar.jpg" alt>
-									</a>
-
-
-									<div class="media-body">
-										<h6 class="media-heading">
-											Arnold <strong>Karlsberg</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Bratislava,
-											Slovakia</small> <span class="badge badge-outline status"></span>
-									</div>
-
-								</div>
-							</li>
-
-							<li class="offline">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar8.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Anna <strong>Opichia</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Budapest,
-											Hungary</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar1.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Lucius <strong>Cashmere</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Wien, Austria</small>
-										<span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/ici-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Ing. Imrich <strong>Kamarel</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Ulaanbaatar,
-											Mongolia</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-					</div>
-
-					<div class="tab-pane pane-settings" id="mmenu-settings">
-						<h5>
-							<strong>Chat</strong> Settings
-						</h5>
-
-						<ul class="settings">
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Offline
-										Users</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-offline" checked="">
-											<label class="onoffswitch-label" for="show-offline">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Fullname</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-fullname"> <label
-												class="onoffswitch-label" for="show-fullname"> <span
-												class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">History Enable</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-history" checked="">
-											<label class="onoffswitch-label" for="show-history">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Locations</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-location" checked="">
-											<label class="onoffswitch-label" for="show-location">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Notifications</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-notifications">
-											<label class="onoffswitch-label" for="show-notifications">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Undread
-										Count</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-unread" checked="">
-											<label class="onoffswitch-label" for="show-unread"> <span
-												class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-
-					</div>
-					<!-- tab-pane -->
-
-				</div>
-				<!-- tab-content -->
-			</div>
-
-
-
-
 
 
 		</div>
@@ -1190,7 +595,28 @@
 			d3.select(this).classed("dragging", false);
 		}
 	</script>
-
+	<script>
+		//默认page=0
+		//点击下一页page+1
+		//点击上一页page-1
+		var page =<%=session.getAttribute("page")%>;
+		console.log(page);
+		$('#previous').click(function(){
+			if(page!=1){
+				page=page-1;
+				window.parent.location.href = "showPersonByPage?page=" + page;
+				//$.get("showPersonByPage?page="+page)
+			}else{
+				page=page;
+			}
+		});
+		$('#next').click(function(){
+			page=page+1;
+			window.parent.location.href =  "showPersonByPage?page=" + page;
+			//$.get("showPersonByPage?page="+page)
+		});
+		
+	</script>
 </body>
 
 </html>

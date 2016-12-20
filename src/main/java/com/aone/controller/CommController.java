@@ -100,7 +100,7 @@ public class CommController {
 //				System.out.println(nodesList.get(i).getName()+" : "+nodesList.get(i).getNoteWeight());
 //			}
 		}
-		return "community";
+		return "forward: /showPersonByPage";
 	}
 
 	/**

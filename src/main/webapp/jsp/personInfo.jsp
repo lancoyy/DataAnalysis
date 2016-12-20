@@ -161,7 +161,7 @@
 
 					<div class="breadcrumbs">
 						<ol class="breadcrumb">
-							<li style="color: #fff">你在这里	</li>
+							<li style="color: #fff">你在这里</li>
 							<li><a href="#" style="color: #fff">政法委大数据分析平台</a></li>
 							<li><a href="#" style="color: #fff">重要人物分析</a></li>
 							<li style="color: #fff">重要人物信息展示</li>
@@ -202,15 +202,14 @@
 									<div class="media-body" style="color: #fff">
 										<div class="col-lg-8 col-md-8 col-sm-8">
 											<h3 class="media-heading">
-												<strong>杨 小慧</strong>
-
+												<strong>${keyPersonInfo.keypersonname}</strong>
 											</h3>
-											<small>学生</small> <span class="glyphicon glyphicon-search"></span><small>四川成都</small></span>
+											<small>${keyPersonInfo.jobName}</small> <i class="fa fa-map-marker"></i><small>四川成都</small></span>
 
 										</div>
 										<!-- 备注：根据积分的颜色变化 -->
 										<div id="fraction" class="col-lg-4 col-md-4 col-sm-4">
-											<h1>93</h1>
+											<h1>${keyPersonInfo.fraction}</h1>
 										</div>
 
 									</div>
@@ -234,27 +233,27 @@
 														<tbody>
 															<tr>
 																<td>民族</td>
-																<td>汉</td>
+																<td>${keyPersonInfo.nation}</td>
 															</tr>
 															<tr>
 																<td>级别</td>
-																<td>1</td>
+																<td>${keyPersonInfo.level}</td>
 															</tr>
 															<tr>
 																<td>类别</td>
-																<td>特殊利益诉求群体类重点人员</td>
+																<td>${keyPersonInfo.category}</td>
 															</tr>
 															<tr>
-																<td>身份证号</td>
-																<td>510106199410251245</td>
+																<td style="width: 80px">身份证号</td>
+																<td>${keyPersonInfo.idNum}</td>
 															</tr>
 															<tr>
-																<td>现居地址</td>
-																<td>四川省 成都市 电子科技大学 13栋 505</td>
+																<td >现居地址</td>
+																<td>${keyPersonInfo.address}</td>
 															</tr>
 															<tr>
 																<td>包保领导</td>
-																<td>韩明皓</td>
+																<td>${keyPersonInfo.leader}</td>
 															</tr>
 
 														</tbody>
@@ -302,9 +301,7 @@
 								<li class="color transparent-black">
 									<div class="pointer slategray"></div>
 									<div class="el-container">
-										<div class="side bg-greensea">
-											<i class="fa fa-user"></i>
-										</div>
+										
 										<div class="content">
 											<span class="time"><i class="fa fa-clock-o"></i>
 												Today, 04:24pm</span>
@@ -329,13 +326,7 @@
 											<h1>
 												<strong>Right Side</strong> Icon
 											</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat.Lorem ipsum dolor sit amet, consectetur
-												adipisicing elit, sed do eiusmod tempor incididunt ut labore
-												et dolore magna aliqua.</p>
+											<p>right side icon2.</p>
 										</div>
 										<div class="side">
 											<i class="fa fa-cog"></i>
@@ -357,11 +348,7 @@
 											<h1>
 												<strong>Left Side</strong> Image
 											</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat.</p>
+											<p>事件3</p>
 										</div>
 									</div>
 								</li>
@@ -400,7 +387,7 @@
 											<h1>
 												<strong>Top</strong> Icon
 											</h1>
-											<i class="fa fa-info-circle block"></i>
+								
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
 												elit, sed do eiusmod tempor incididunt ut labore et dolore
 												magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -426,7 +413,7 @@
 												magna aliqua. Ut enim ad minim veniam, quis nostrud
 												exercitation ullamco laboris nisi ut aliquip ex ea commodo
 												consequat.</p>
-											<img src="./res/img/carousel/carousel3.jpg" alt>
+										
 										</div>
 									</div>
 								</li>

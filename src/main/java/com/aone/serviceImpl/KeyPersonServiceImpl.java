@@ -1,5 +1,7 @@
 package com.aone.serviceImpl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -49,4 +51,12 @@ public class KeyPersonServiceImpl implements KeyPersonService{
 		return keyPersonDao.showPersonByPageDao(propertyName, desc, startRow, pageSize);
 	}
 
+	/**
+	 * @author Joe
+	 * @function 对keyperson表中的问题属地,问题类别，各级别的重点人数进行统计
+	 * @return
+	 */
+	public ArrayList<HashMap<String, Integer>> keyPersonStatus(){
+		return keyPersonDao.keyPersonStatusDao();
+	}
 }
