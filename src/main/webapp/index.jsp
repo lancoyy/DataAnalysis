@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body>
-	<a href="community">政法大数据分析平台</a>
+	<a href="commIndex">政法大数据分析平台</a>
 	<br>
 </body>
 </html>

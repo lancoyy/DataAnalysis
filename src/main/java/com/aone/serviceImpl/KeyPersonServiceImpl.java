@@ -14,6 +14,7 @@ import com.aone.dao.ContradictionDao;
 import com.aone.dao.KeyPersonDao;
 import com.aone.entity.Contradiction;
 import com.aone.entity.KeyPerson;
+import com.aone.entity.Page;
 import com.aone.service.KeyPersonService;
 
 @Service(value="keyPersonService")
@@ -41,14 +42,23 @@ public class KeyPersonServiceImpl implements KeyPersonService{
 	/**
 	 * @author Joe
 	 * @function 按属性名分页查询重点人员
+	 * @param currentpage 当前页
 	 * @param propertyName 排序属性名称
 	 * @param desc 是否倒序
 	 * @param startRow 起始记录
 	 * @param pageSize 分页大小
 	 * @return
 	 */
-	public List<KeyPerson> showPersonByPage(String propertyName,boolean desc,Integer startRow,Integer pageSize){
-		return keyPersonDao.showPersonByPageDao(propertyName, desc, startRow, pageSize);
+	public Page showPersonByPage(int currentpage, String propertyName,boolean desc,Integer startRow,Integer pageSize){
+		List<KeyPerson> kpList = keyPersonDao
+				.showPersonByPageDao(propertyName, desc, startRow, pageSize);//获得当前显示人员
+		// 测试
+		// for(KeyPerson kp : kpList){
+		// System.out.println(kp.getName()+"---"+kp.getFraction());
+		// }
+		int pageTotal = (int) Math.ceil(keyPersonDao.getPageTotal()/pageSize);//计算总页数
+		Page page = new Page(currentpage, pageTotal, kpList);
+		return  page;
 	}
 
 	/**
@@ -58,5 +68,13 @@ public class KeyPersonServiceImpl implements KeyPersonService{
 	 */
 	public ArrayList<HashMap<String, Integer>> keyPersonStatus(){
 		return keyPersonDao.keyPersonStatusDao();
+	}
+	
+	/**
+	 * @author Joe
+	 * @function 条件检索：获得指定时间范围内，通信次数大于num的统计信息
+	 */
+	public ArrayList<HashMap<String,Integer>> commSearchService(int num, String startDate, String endDate, String targetPerson){
+		return keyPersonDao.commSearchDao(num, startDate, endDate, targetPerson);
 	}
 }

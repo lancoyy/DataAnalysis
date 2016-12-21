@@ -197,7 +197,7 @@
 
 								<div class="media social-feed">
 									<span class="pull-left" style="padding-left:60px"> <img
-										src="./res/img/profile-photo.jpg" alt class="img-circle">
+										src="http://localhost:8080/pic/${keyPersonInfo.keyPersonID}.jpg" alt class="img-circle">
 									</span>
 
 									<div class="media-body" style="color: #fff">
