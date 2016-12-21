@@ -305,13 +305,14 @@
 										<ul>
 											<li class="online">
 												<div class="media">
-													<a class="pull-left profile-photo" href="#"> <img
+													<a class="pull-left profile-photo" href="searchById?id=${person.keyPersonID}"> <img
 														class="media-object" src="./res/img/ici-avatar.jpg" alt
 														style="width:45px; border-radius: 50%; padding-bottom:3px;">
 													</a>
 													<div class="media-body">
 														<h6 class="media-heading">
-															<strong><a href="searchById?id=${person.keyPersonID}">${person.keypersonname}</a></strong>
+															<strong><a
+																href="searchById?id=${person.keyPersonID}" style="color: #fff">${person.keypersonname}</a></strong>
 														</h6>
 														<small><i class="fa fa-map-marker"></i>
 															${person.popedom}</small> <span
@@ -322,11 +323,9 @@
 										</ul>
 									</c:forEach>
 									<ul class="pager pager-custom">
-										<li><a id="previous"><i
-												class="fa fa-angle-left"></i></a></li>
+										<li><a id="previous"><i class="fa fa-angle-left"></i></a></li>
 										<li class="active">${page}</li>
-										<li><a id="next"><i
-												class="fa fa-angle-right"></i></a></li>
+										<li><a id="next"><i class="fa fa-angle-right"></i></a></li>
 									</ul>
 
 								</div>
@@ -418,7 +417,27 @@
 			}, function() {
 				$(this).removeClass('flip');
 			});
-		})
+		});
+		
+		//默认page=1
+		//点击下一页page+1
+		//点击上一页page-1
+		var page =<%=session.getAttribute("page")%>;
+		console.log(page);
+		$('#previous').click(function(){
+			if(page!=1){
+				page=page-1;
+				window.parent.location.href = "showPersonByPage?page=" + page;
+				//$.get("showPersonByPage?page="+page)
+			}else{
+				page=page;
+			}
+		});
+		$('#next').click(function(){
+			page=page+1;
+			window.parent.location.href =  "showPersonByPage?page=" + page;
+			//$.get("showPersonByPage?page="+page)
+		});
 	</script>
 	<script>
 		var margin = {
@@ -595,28 +614,7 @@
 			d3.select(this).classed("dragging", false);
 		}
 	</script>
-	<script>
-		//默认page=0
-		//点击下一页page+1
-		//点击上一页page-1
-		var page =<%=session.getAttribute("page")%>;
-		console.log(page);
-		$('#previous').click(function(){
-			if(page!=1){
-				page=page-1;
-				window.parent.location.href = "showPersonByPage?page=" + page;
-				//$.get("showPersonByPage?page="+page)
-			}else{
-				page=page;
-			}
-		});
-		$('#next').click(function(){
-			page=page+1;
-			window.parent.location.href =  "showPersonByPage?page=" + page;
-			//$.get("showPersonByPage?page="+page)
-		});
-		
-	</script>
+	
 </body>
 
 </html>

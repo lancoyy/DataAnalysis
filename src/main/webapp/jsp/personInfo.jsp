@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -178,8 +179,8 @@
 					<!-- row -->
 					<div class="row">
 
-						<!-- col 4  -->
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<!-- col 8  -->
+						<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
 							<!-- tile -->
 							<section class="tile color transparent-white">
 
@@ -195,16 +196,17 @@
 								<!-- tile widget -->
 
 								<div class="media social-feed">
-									<span class="pull-left" style="padding-left:10px"> <img
+									<span class="pull-left" style="padding-left:60px"> <img
 										src="./res/img/profile-photo.jpg" alt class="img-circle">
 									</span>
 
 									<div class="media-body" style="color: #fff">
 										<div class="col-lg-8 col-md-8 col-sm-8">
-											<h3 class="media-heading">
+											<h2 class="media-heading">
 												<strong>${keyPersonInfo.keypersonname}</strong>
-											</h3>
-											<small>${keyPersonInfo.jobName}</small> <i class="fa fa-map-marker"></i><small>四川成都</small></span>
+											</h2>
+											<small>&nbsp;${keyPersonInfo.jobName}&nbsp;&nbsp;&nbsp;<i
+												class="fa fa-map-marker"></i>${keyPersonInfo.popedom}</small></span>
 
 										</div>
 										<!-- 备注：根据积分的颜色变化 -->
@@ -244,11 +246,11 @@
 																<td>${keyPersonInfo.category}</td>
 															</tr>
 															<tr>
-																<td style="width: 80px">身份证号</td>
+																<td style="width: 120px">身份证号</td>
 																<td>${keyPersonInfo.idNum}</td>
 															</tr>
 															<tr>
-																<td >现居地址</td>
+																<td>现居地址</td>
 																<td>${keyPersonInfo.address}</td>
 															</tr>
 															<tr>
@@ -261,7 +263,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-drank">
+										<div class="panel panel-redbrown">
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a data-toggle="collapse" href="#multicollapseThree"> <strong>诉求</strong>
@@ -280,582 +282,181 @@
 								</div>
 							</section>
 							<!-- /tile body -->
-
-
-
 							<!-- /tile -->
+
+							<!-- tile -->
+							<section class="tile transparent">
+								<div class="tile-header transparent">
+									<h1>
+										<strong>通联列表</strong>
+									</h1>
+									<span class="note">including: <span class="italic">col
+											reorder with resize</span></span>
+									<div class="controls">
+										<a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+										<a href="#" class="remove"><i class="fa fa-times"></i></a>
+									</div>
+								</div>
+							</section>
+							<div class="col-lg-6 col-md-12 col-xs-12"
+								style="padding-left: 0px;">
+
+								<section class="tile color transparent-black"
+									style="height:300px">
+									<!-- tile header -->
+									<div class="tile-header">
+										<h1>
+											<strong>Transparent Black</strong> Tile
+										</h1>
+										<div class="controls">
+											<a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+											<a href="#" class="remove"><i class="fa fa-times"></i></a>
+										</div>
+									</div>
+									<!-- /tile header -->
+
+									<!-- tile body -->
+									<div id="subcommunity" class="tile-body"></div>
+									<!-- /tile body -->
+
+								</section>
+							</div>
+
+							<div class="col-lg-6 col-md-12 col-xs-12"
+								style="padding-right: 0px;">
+								<section class="tile transparent">
+									<!-- tile body -->
+
+									<div class="tile-body rounded-corners">
+
+										<div class="table-responsive">
+											<div id="drillDownDataTable_wrapper"
+												class="dataTables_wrapper form-inline" role="grid">
+												<div class="row">
+													<div class="col-md-6">
+														<div id="drillDownDataTable_length"
+															class="dataTables_length"></div>
+													</div>
+													<div class="col-md-6">
+														<div class="dataTables_filter"
+															id="drillDownDataTable_filter">
+															<label><input aria-controls="drillDownDataTable"
+																placeholder="Search" type="text"></label>
+														</div>
+													</div>
+													<div id="drillDownDataTable_processing"
+														class="dataTables_processing" style="visibility: hidden;">Processing...</div>
+												</div>
+												<table class="table table-datatable table-custom dataTable"
+													id="drillDownDataTable"
+													aria-describedby="drillDownDataTable_info">
+													<thead>
+														<tr role="row">
+															<th class="no-sort sorting_disabled control text-center"
+																style="width: 45px; cursor: pointer;"
+																role="columnheader" rowspan="1" colspan="1"
+																aria-label=""></th>
+															<th class="sort-alpha sorting" role="columnheader"
+																tabindex="0" aria-controls="drillDownDataTable"
+																rowspan="1" colspan="1"
+																style="width: 504px; cursor: pointer;"
+																aria-label="Rendering engine: activate to sort column ascending">Rendering
+																engine</th>
+															<th class="sort-alpha sorting" role="columnheader"
+																tabindex="0" aria-controls="drillDownDataTable"
+																rowspan="1" colspan="1"
+																style="width: 271px; cursor: pointer;"
+																aria-label="Browser: activate to sort column ascending">Browser</th>
+															<th class="sorting_asc" role="columnheader" tabindex="0"
+																aria-controls="drillDownDataTable" rowspan="1"
+																colspan="1" style="width: 276px; cursor: pointer;"
+																aria-sort="ascending"
+																aria-label="CSS grade: activate to sort column descending">CSS
+																grade</th>
+														</tr>
+													</thead>
+
+													<tbody role="alert" aria-live="polite" aria-relevant="all">
+														<tr class="odd">
+															<td colspan="4" class="dataTables_empty" valign="top">No
+																data available in table</td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="row">
+													<div class="col-md-4 sm-center">
+														<div class="dataTables_info" id="drillDownDataTable_info">Showing
+															0 to 0 of 0 entries</div>
+													</div>
+													<div class="col-md-4"></div>
+													<div class="col-md-4 text-right sm-center">
+														<div
+															class="dataTables_paginate paging_bootstrap paging_custombootstrap">
+															<ul class="pagination">
+																<li class="prev disabled"><a href="#">Previous</a></li>
+																<li class="next disabled"><a href="#">Next</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<!-- /tile body -->
+
+
+
+								</section>
+							</div>
+						</div>
+						<!-- /col8 -->
+
+						<!-- col4 -->
+						<div class="col-lg-4 col-md-12 col-xs-12 sm-left">
+							<section tile transparent no-shadow>
+								<h1 class="timeline-heading">
+									<strong>时间轴</strong>
+								</h1>
+
+
+								<ol class="timeline timeline-mini">
+									<c:forEach items="${contradictions}" var="contradiction">
+										<li class="color transparent-black">
+											<div class="pointer slategray"></div>
+											<div class="el-container">
+												<div class="content">
+													<span class="time"><i class="fa fa-clock-o"></i>${contradiction.addTime}</span>
+													<h1>
+														<strong>${contradiction.keyProblem}</strong><br> <small>${contradiction.keyword}</small>
+													</h1>
+
+													<p>${contradiction.issueContent}</p>
+												</div>
+											</div>
+										</li>
+									</c:forEach>
+
+								</ol>
+
+								<h1 class="timeline-heading">
+									<strong>Older</strong>
+								</h1>
+
+							</section>
 						</div>
 						<!-- /col4 -->
-
-						<!-- col 8 -->
-						<div class="col-lg-8 col-md-12 col-xs-12 text-center sm-left">
-
-
-
-							<h1 class="timeline-heading">
-								<strong>This</strong> month
-							</h1>
-
-							<ol class="timeline">
-
-								<li class="color transparent-black">
-									<div class="pointer slategray"></div>
-									<div class="el-container">
-										
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Today, 04:24pm</span>
-											<h1>
-												<strong>Left Side</strong> Icon
-											</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua.</p>
-										</div>
-									</div>
-								</li>
-
-								<li class="color transparent-black textured">
-									<div class="pointer slategray">
-										<i class="fa fa-calendar"></i>
-									</div>
-									<div class="el-container">
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Today, 03:15pm</span>
-											<h1>
-												<strong>Right Side</strong> Icon
-											</h1>
-											<p>right side icon2.</p>
-										</div>
-										<div class="side">
-											<i class="fa fa-cog"></i>
-										</div>
-									</div>
-								</li>
-
-								<li class="color transparent-white">
-									<div class="pointer slategray">
-										<i class="fa fa-clock-o"></i>
-									</div>
-									<div class="el-container">
-										<div class="side">
-											<img src="./res/img/carousel/carousel1.jpg" alt>
-										</div>
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Today, 03:12pm</span>
-											<h1>
-												<strong>Left Side</strong> Image
-											</h1>
-											<p>事件3</p>
-										</div>
-									</div>
-								</li>
-
-								<li class="color transparent-black">
-									<div class="pointer slategray">
-										<i class="fa fa-coffee"></i>
-									</div>
-									<div class="el-container">
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Today, 01:55pm</span>
-											<h1>
-												<strong>Right Side</strong> Image
-											</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat.</p>
-										</div>
-										<div class="side">
-											<img src="./res/img/carousel/carousel2.jpg" alt>
-										</div>
-									</div>
-								</li>
-
-								<li class="color transparent-black">
-									<div class="pointer slategray">
-										<i class="fa fa-envelope"></i>
-									</div>
-									<div class="el-container">
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Yesterday, 18:40pm</span>
-											<h1>
-												<strong>Top</strong> Icon
-											</h1>
-								
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat.</p>
-										</div>
-									</div>
-								</li>
-
-								<li class="color transparent-white">
-									<div class="pointer slategray">
-										<i class="fa fa-comments"></i>
-									</div>
-									<div class="el-container">
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Yesterday, 22:12pm</span>
-											<h1>
-												<strong>Bottom</strong> Image
-											</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat.</p>
-										
-										</div>
-									</div>
-								</li>
-
-								<li class="color red">
-									<div class="pointer red">
-										<i class="fa fa-heart"></i>
-									</div>
-									<div class="el-container">
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Yesterday, 13:22pm</span>
-											<h1>Colored Element</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat.</p>
-										</div>
-									</div>
-								</li>
-
-								<li class="full-width">
-									<div class="pointer slategray">
-										<i class="fa fa-question-circle"></i>
-									</div>
-									<div class="el-container">
-										<div class="content">
-											<span class="time"><i class="fa fa-clock-o"></i>
-												Yesterday, 10:18am</span>
-											<h1>Full-Width Element</h1>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed do eiusmod tempor incididunt ut labore et dolore
-												magna aliqua. Ut enim ad minim veniam, quis nostrud
-												exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat. Duis aute irure dolor in reprehenderit in
-												voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-												Excepteur sint occaecat cupidatat non proident, sunt in
-												culpa qui officia deserunt mollit anim id est laborum.</p>
-										</div>
-									</div>
-								</li>
-
-							</ol>
-
-							<h1 class="timeline-heading">
-								<strong>Older</strong>
-							</h1>
-
-
-						</div>
-						<!-- /col 18 -->
 
 					</div>
 					<!-- /row -->
 
 				</div>
+
 				<!-- /content container -->
 
 
 			</div>
 			<!-- Page content end -->
-
-
-
-
-			<div id="mmenu" class="right-panel">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs nav-justified">
-					<li class="active"><a href="#mmenu-users" data-toggle="tab"><i
-							class="fa fa-users"></i></a></li>
-					<li class=""><a href="#mmenu-history" data-toggle="tab"><i
-							class="fa fa-clock-o"></i></a></li>
-					<li class=""><a href="#mmenu-friends" data-toggle="tab"><i
-							class="fa fa-heart"></i></a></li>
-					<li class=""><a href="#mmenu-settings" data-toggle="tab"><i
-							class="fa fa-gear"></i></a></li>
-				</ul>
-
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane active" id="mmenu-users">
-						<h5>
-							<strong>Online</strong> Users
-						</h5>
-
-						<ul class="users-list">
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/ici-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Ing. Imrich <strong>Kamarel</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Ulaanbaatar,
-											Mongolia</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/arnold-avatar.jpg" alt>
-									</a>
-
-									<div class="media-body">
-										<h6 class="media-heading">
-											Arnold <strong>Karlsberg</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Bratislava,
-											Slovakia</small> <span class="badge badge-outline status"></span>
-									</div>
-
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/peter-avatar.jpg" alt>
-
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Peter <strong>Kay</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Kosice,
-											Slovakia</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/george-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											George <strong>McCain</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Prague, Czech
-											Republic</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar1.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Lucius <strong>Cashmere</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Wien, Austria</small>
-										<span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar2.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Jesse <strong>Phoenix</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Berlin,
-											Germany</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-
-
-
-					</div>
-
-					<div class="tab-pane" id="mmenu-history">
-						<h5>
-							<strong>Chat</strong> History
-						</h5>
-
-						<ul class="history-list">
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/ici-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Ing. Imrich <strong>Kamarel</strong>
-										</h6>
-										<small>Lorem ipsum dolor sit amet, consectetur
-											adipisicing elit, sed do eiusmod tempor</small> <span
-											class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-
-									<a class="pull-left profile-photo" href="#" style="witdh:45px">
-										<img class="media-object" src="./res/img/arnold-avatar.jpg"
-										alt>
-									</a>
-
-									<div class="media-body">
-										<h6 class="media-heading">
-											Arnold <strong>Karlsberg</strong>
-										</h6>
-										<small>Duis aute irure dolor in reprehenderit in
-											voluptate velit esse cillum dolore eu fugiat nulla pariatur</small> <span
-											class="badge badge-outline status"></span>
-									</div>
-
-								</div>
-							</li>
-
-							<li class="offline">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/peter-avatar.jpg" alt>
-
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Peter <strong>Kay</strong>
-										</h6>
-										<small>Excepteur sint occaecat cupidatat non proident,
-											sunt in culpa qui officia deserunt mollit </small> <span
-											class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-
-					</div>
-
-					<div class="tab-pane" id="mmenu-friends">
-						<h5>
-							<strong>Friends</strong> List
-						</h5>
-						<ul class="favourite-list">
-
-							<li class="online">
-								<div class="media">
-
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/arnold-avatar.jpg" alt>
-									</a>
-
-
-									<div class="media-body">
-										<h6 class="media-heading">
-											Arnold <strong>Karlsberg</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Bratislava,
-											Slovakia</small> <span class="badge badge-outline status"></span>
-									</div>
-
-								</div>
-							</li>
-
-							<li class="offline">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar8.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Anna <strong>Opichia</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Budapest,
-											Hungary</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="busy">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/random-avatar1.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Lucius <strong>Cashmere</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Wien, Austria</small>
-										<span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-							<li class="online">
-								<div class="media">
-									<a class="pull-left profile-photo" href="#"> <img
-										class="media-object" src="./res/img/ici-avatar.jpg" alt>
-									</a>
-									<div class="media-body">
-										<h6 class="media-heading">
-											Ing. Imrich <strong>Kamarel</strong>
-										</h6>
-										<small><i class="fa fa-map-marker"></i> Ulaanbaatar,
-											Mongolia</small> <span class="badge badge-outline status"></span>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-					</div>
-
-					<div class="tab-pane pane-settings" id="mmenu-settings">
-						<h5>
-							<strong>Chat</strong> Settings
-						</h5>
-
-						<ul class="settings">
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Offline
-										Users</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-offline" checked="">
-											<label class="onoffswitch-label" for="show-offline">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Fullname</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-fullname"> <label
-												class="onoffswitch-label" for="show-fullname"> <span
-												class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">History Enable</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-history" checked="">
-											<label class="onoffswitch-label" for="show-history">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Locations</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-location" checked="">
-											<label class="onoffswitch-label" for="show-location">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Notifications</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-notifications">
-											<label class="onoffswitch-label" for="show-notifications">
-												<span class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="form-group">
-									<label class="col-xs-8 control-label">Show Undread
-										Count</label>
-									<div class="col-xs-4 control-label">
-										<div class="onoffswitch greensea">
-											<input type="checkbox" name="onoffswitch"
-												class="onoffswitch-checkbox" id="show-unread" checked="">
-											<label class="onoffswitch-label" for="show-unread"> <span
-												class="onoffswitch-inner"></span> <span
-												class="onoffswitch-switch"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-
-					</div>
-					<!-- tab-pane -->
-
-				</div>
-				<!-- tab-content -->
-			</div>
-
-
-
-
 
 
 		</div>
@@ -917,225 +518,172 @@
  -->
 
 	<script>
-		$(function() {
+		var margin = {
+				top : -5,
+				right : -5,
+				bottom : -5,
+				left : -5
+			},
+			width = document.getElementById("statistics-chart").offsetWidth,
 	
-			// Initialize card flip
-			$('.card.hover').hover(function() {
-				$(this).addClass('flip');
-			}, function() {
-				$(this).removeClass('flip');
+			height = document.getElementById("statistics-chart").offsetHeight;
+	
+		var zoom = d3.behavior.zoom()
+			.scaleExtent([ 0.3, 10 ])
+			.on("zoom", zoomed);
+	
+		var drag = d3.behavior.drag()
+			.origin(function(d) {
+				return d;
+			})
+			.on("dragstart", dragstarted)
+			.on("drag", dragged)
+			.on("dragend", dragended);
+	
+	
+	
+		/* var width = 845,
+		    height = 630; */
+	
+		var color = d3.scale.category20();
+		//var color = [ "#1f77b4", "#8C0044", "#A42D00", "#886600", "#668800", "#008800", "#8c6d31", "#770077", "#AA0000", "#CC6600", "#00AA00", "#00AA88", "#227700", "#000088", "#FF0000" ];
+	
+		var force = d3.layout.force()
+			.charge(-700) // 获取或设置节点的电荷数.(电荷数决定结点是互相排斥还是吸引)
+			.linkDistance(200) // 获取或设置节点间的连接线距离.
+			.size([ width, height ]); //获取或设置布局的 宽 和 高 的大小.
+	
+		var svg = d3.select("#subcommunity").append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.right + ")")
+			.call(zoom);
+	
+		var rect = svg.append("rect")
+			.attr("width", width)
+			.attr("height", height)
+			.style("fill", "none")
+			.style("pointer-events", "all");
+	
+		var container = svg.append("g");
+				
+		d3.json("getSubDatas", function(error, graph) {
+			force
+				.nodes(graph.nodes) //获得或设置布局中的节点（node）阵列组
+				.links(graph.links) //获得或设置布局中节点间的连接（Link）阵列组
+				.start();
+	
+			//定义连线
+			var link = container.selectAll(".link")
+				.data(graph.links)
+				.enter()
+				.append("line")
+				.attr("class", "link")
+				.attr("stroke", "#09F")
+				.attr("stroke-opacity", "0.4")
+				.style("stroke-width", 2)
+				.on("mouseover", function(d) {
+					d3.select(this).style("stroke-width", 4).style("cursor", "hand");
+				}).on("mouseout", function(d) {
+				d3.select(this).style("stroke-width", 2);
 			});
 	
 	
-			$(window).resize(function() {
-				// redraw the graph in the correctly sized div
-				plot.resize();
-				plot.setupGrid();
-				plot.draw();
+			//定义节点标记
+			var node = container.selectAll(".node")
+				.data(graph.nodes)
+				.enter()
+				.append("g");
+	
+			//节点圆形标记
+			node.append("circle")
+				.attr("class", "node")
+				.attr("r", 10)
+				.attr("stroke", "#ff0")
+				.style("fill", function(d) {
+					return color(d.group);
+				})
+				.call(force.drag)
+				.on("mouseover", function(d) {
+					d3.select(this).attr("r", 15);
+				}).on("mouseout", function(d) {
+				d3.select(this).attr("r", 10);
+			}).on("contextmenu", function(d) {
+	
+				window.clipboardData.setData("Text", d.name);
 			});
+			;
 	
-			$('#mmenu').on(
-				"opened.mm",
-				function() {
-					// redraw the graph in the correctly sized div
-					plot.resize();
-					plot.setupGrid();
-					plot.draw();
-				}
-			);
+			//标记鼠标悬停的标签
+			node.append("title")
+				.text(function(d) {
+					return d.name;
+				});
 	
-			$('#mmenu').on(
-				"closed.mm",
-				function() {
-					// redraw the graph in the correctly sized div
-					plot.resize();
-					plot.setupGrid();
-					plot.draw();
-				}
-			);
-	
-			// tooltips showing
-			$("#statistics-chart").bind("plothover", function(event, pos, item) {
-				if (item) {
-					var x = item.datapoint[0],
-						y = item.datapoint[1];
-	
-					$("#tooltip").html('<h1 style="color: #418bca">' + months[x - 1] + '</h1>' + '<strong>' + y + '</strong>' + ' ' + item.series.label)
-						.css({
-							top : item.pageY - 30,
-							left : item.pageX + 5
-						})
-						.fadeIn(200);
+			//节点上显示的姓名
+			var i = 0;
+			svg.on("dblclick", function(d) {
+				if (i % 2 == 0) {
+					node.append("text")
+						.attr("dy", ".3em")
+						.attr("class", "nodetext")
+						.style("text-anchor", "middle")
+						.text(function(d) {
+							return d.name;
+						});
+					i++;
 				} else {
-					$("#tooltip").hide();
+					node.select("text").remove("nodetext");
+					i++;
 				}
+	
 			});
 	
+			//开始力学动作
+			force.on("tick", function() {
+				link.attr("x1", function(d) {
+					return d.source.x;
+				})
+					.attr("y1", function(d) {
+						return d.source.y;
+					})
+					.attr("x2", function(d) {
+						return d.target.x;
+					})
+					.attr("y2", function(d) {
+						return d.target.y;
+					});
 	
-			//tooltips options
-			$("<div id='tooltip'></div>").css({
-				position : "absolute",
-				//display: "none",
-				padding : "10px 20px",
-				"background-color" : "#ffffff",
-				"z-index" : "99999"
-			}).appendTo("body");
-	
-			//generate actual pie charts
-			$('.pie-chart').easyPieChart();
-	
-	
-			//server load rickshaw chart
-			var graph;
-	
-			var seriesData = [ [], [] ];
-			var random = new Rickshaw.Fixtures.RandomData(50);
-	
-			for (var i = 0; i < 50; i++) {
-				random.addData(seriesData);
-			}
-	
-			graph = new Rickshaw.Graph({
-				element : document.querySelector("#serverload-chart"),
-				height : 150,
-				renderer : 'area',
-				series : [
-					{
-						data : seriesData[0],
-						color : '#6e6e6e',
-						name : 'File Server'
-					}, {
-						data : seriesData[1],
-						color : '#fff',
-						name : 'Mail Server'
-					}
-				]
+				node.attr("transform", function(d) {
+					return "translate(" + d.x + "," + d.y + ")";
+				});
 			});
+		});
 	
-			var hoverDetail = new Rickshaw.Graph.HoverDetail({
-				graph : graph,
-			});
+		function dottype(d) {
+			d.x = +d.x;
+			d.y = +d.y;
+			return d;
+		}
 	
-			setInterval(function() {
-				random.removeData(seriesData);
-				random.addData(seriesData);
-				graph.update();
+		function zoomed() {
+			container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+		}
 	
-			}, 1000);
+		function dragstarted(d) {
+			d3.event.sourceEvent.stopPropagation();
+			d3.select(this).classed("dragging", true);
+		}
 	
-			// Morris donut chart
-			Morris.Donut({
-				element : 'browser-usage',
-				data : [
-					{
-						label : "Chrome",
-						value : 25
-					},
-					{
-						label : "Safari",
-						value : 20
-					},
-					{
-						label : "Firefox",
-						value : 15
-					},
-					{
-						label : "Opera",
-						value : 5
-					},
-					{
-						label : "Internet Explorer",
-						value : 10
-					},
-					{
-						label : "Other",
-						value : 25
-					}
-				],
-				colors : [ '#00a3d8', '#2fbbe8', '#72cae7', '#d9544f', '#ffc100', '#1693A5' ]
-			});
+		function dragged(d) {
+			d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+		}
 	
-			$('#browser-usage').find("path[stroke='#ffffff']").attr('stroke', 'rgba(0,0,0,0)');
-	
-			//sparkline charts
-			$('#projectbar1').sparkline('html', {
-				type : 'bar',
-				barColor : '#22beef',
-				barWidth : 4,
-				height : 20
-			});
-			$('#projectbar2').sparkline('html', {
-				type : 'bar',
-				barColor : '#cd97eb',
-				barWidth : 4,
-				height : 20
-			});
-			$('#projectbar3').sparkline('html', {
-				type : 'bar',
-				barColor : '#a2d200',
-				barWidth : 4,
-				height : 20
-			});
-			$('#projectbar4').sparkline('html', {
-				type : 'bar',
-				barColor : '#ffc100',
-				barWidth : 4,
-				height : 20
-			});
-			$('#projectbar5').sparkline('html', {
-				type : 'bar',
-				barColor : '#ff4a43',
-				barWidth : 4,
-				height : 20
-			});
-			$('#projectbar6').sparkline('html', {
-				type : 'bar',
-				barColor : '#a2d200',
-				barWidth : 4,
-				height : 20
-			});
-	
-			// sortable table
-			$('.table.table-sortable th.sortable').click(function() {
-				var o = $(this).hasClass('sort-asc') ? 'sort-desc' : 'sort-asc';
-				$('th.sortable').removeClass('sort-asc').removeClass('sort-desc');
-				$(this).addClass(o);
-			});
-	
-			//todo's
-			$('#todolist li label').click(function() {
-				$(this).toggleClass('done');
-			});
-	
-			// Initialize tabDrop
-			$('.tabdrop').tabdrop({
-				text : '<i class="fa fa-th-list"></i>'
-			});
-	
-			//load wysiwyg editor
-			$('#quick-message-content').summernote({
-				toolbar : [
-					//['style', ['style']], // no style button
-					[ 'style', [ 'bold', 'italic', 'underline', 'clear' ] ],
-					[ 'fontsize', [ 'fontsize' ] ],
-					[ 'color', [ 'color' ] ],
-					[ 'para', [ 'ul', 'ol', 'paragraph' ] ],
-					[ 'height', [ 'height' ] ],
-				//['insert', ['picture', 'link']], // no insert buttons
-				//['table', ['table']], // no table button
-				//['help', ['help']] //no help button
-				],
-				height : 143 //set editable area's height
-			});
-	
-			//multiselect input
-			$(".chosen-select").chosen({
-				disable_search_threshold : 10
-			});
-	
-		})
+		function dragended(d) {
+			d3.select(this).classed("dragging", false);
+		}
 	</script>
-
 
 
 </body>

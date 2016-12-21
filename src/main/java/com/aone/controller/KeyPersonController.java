@@ -57,6 +57,7 @@ public class KeyPersonController {
 		session.setAttribute("keyPersonInfo", kp);
 
 		// 获得该重要人员的社团信息,对社团进行重要节点分析
+		
 		AllNodesandEdges allNodesandEdges = (AllNodesandEdges) session.getAttribute("allFNUodesandEdges");
 		ArrayList<Nodes> nodeList = allNodesandEdges.getNodeList();
 		ArrayList<Group> groupList = allNodesandEdges.getAllGroups();
@@ -97,7 +98,9 @@ public class KeyPersonController {
 				break;
 			}
 		}
+		
 		// 获得该重要人员的事件信息
+		System.out.println(contradictionService.findContradictionsByPerson(id));
 		session.setAttribute("contradictions", contradictionService.findContradictionsByPerson(id));
 		return "personInfo";
 	}
@@ -121,7 +124,7 @@ public class KeyPersonController {
 		// System.out.println(kp.getName()+"---"+kp.getFraction());
 		// }
 
-		return "community";
+		return "forward: /keyPersonStatus";
 	}
 
 	/**
@@ -135,6 +138,6 @@ public class KeyPersonController {
 		session.setAttribute("territory", list.get(0));
 		session.setAttribute("issueContent", list.get(1));
 		session.setAttribute("level", list.get(2));
-		return null;
+		return "community";
 	}
 }
